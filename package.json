@@ -1,0 +1,66 @@
+{
+  "name": "@ctrl/torrent-search",
+  "version": "0.0.0-placeholder",
+  "description": "Search torrent sites using definition files from jackett and cardigann",
+  "author": "Scott Cooper <scttcper@gmail.com>",
+  "license": "MIT",
+  "repository": "typectrl/torrent-search",
+  "keywords": [
+    "tracker",
+    "torrent",
+    "search",
+    "typescript"
+  ],
+  "source": "src/index.ts",
+  "main": "./torrent-search.js",
+  "module": "./torrent-search.m.js",
+  "typings": "./src/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "tslint -t stylish -p .",
+    "lint:fix": "tslint -p tsconfig.json -t stylish --fix 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "cp package.json dist && cp LICENSE dist && cp README.md dist && rimraf dist/test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --coverage --no-cache",
+    "semantic-release": "cd dist && semantic-release"
+  },
+  "dependencies": {
+    "@ctrl/cloudflare": "^1.0.5",
+    "@ctrl/golang-template": "^1.0.1",
+    "@ctrl/tracker-definitions": "^1.0.5",
+    "cheerio": "^1.0.0-rc.2",
+    "cloudscraper": "^2.0.0",
+    "date-fns": "^2.0.0-alpha.27",
+    "filenamify": "^2.1.0",
+    "got": "^9.6.0",
+    "tough-cookie": "^3.0.0",
+    "ua-string": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.10",
+    "@types/got": "^9.4.0",
+    "@types/jest": "23.3.13",
+    "@types/node": "10.12.18",
+    "@types/tough-cookie": "^2.3.5",
+    "@types/ua-string": "^2.0.0",
+    "jest": "23.6.0",
+    "prettier": "1.16.0",
+    "rimraf": "2.6.3",
+    "semantic-release": "15.13.3",
+    "ts-jest": "23.10.5",
+    "ts-node": "7.0.1",
+    "tslint": "5.12.1",
+    "tslint-config-prettier": "1.17.0",
+    "tslint-xo": "0.11.0",
+    "typescript": "3.2.4"
+  },
+  "release": {
+    "branch": "master"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
