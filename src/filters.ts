@@ -4,6 +4,7 @@
  */
 import filenamify from 'filenamify';
 import { parse } from 'date-fns';
+import { trim as ltrim } from 'lodash';
 
 export function regexp(str: string, regExpStr: string): string {
   const exp = new RegExp(regExpStr);
@@ -15,7 +16,7 @@ export function toupper(str: string) {
   return str.toUpperCase();
 }
 
-export function prepend(str: string, arg: string | number) {
+export function prepend(str: string, arg: string) {
   return `${arg}${str}`;
 }
 
@@ -23,12 +24,17 @@ export function append(str: string, arg: string | number) {
   return `${str}${arg}`;
 }
 
-export function validfilename(str: string, replacement = '_'): boolean {
+export function validfilename(str: string, replacement = '_'): string {
   return filenamify(str, { replacement });
 }
 
 export function urlencode(str: string) {
   return encodeURI(str);
+}
+
+export function re_replace(str: string, searchValue: string, replaceValue: string) {
+  const reg = new RegExp(searchValue);
+  return str.replace(reg, replaceValue);
 }
 
 export function replace(str: string, searchValue: string, replaceValue: string) {
@@ -39,8 +45,11 @@ export function split(str: string, searchValue: string, position: number) {
   return str.split(searchValue)[position];
 }
 
+export function trim(str: string, char?: string) {
+  return ltrim(str, char);
+}
+
 export function dateparse(str: string, layout: string) {
-  console.log('date', str);
   const trimmed = str.trim();
   let pattern = layout;
 

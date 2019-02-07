@@ -1,107 +1,112 @@
 import cheerio from 'cheerio';
+import { range } from 'lodash';
 
 import { parse as golangParse } from '@ctrl/golang-template';
-import { Fields, FilterElement, Selector } from '@ctrl/tracker-definitions';
+import { Fields, Filters, GarbageDateparseFilter, Selector } from '@ctrl/tracker-definitions';
 
 import * as filters from './filters';
 
-export function parseSearchResults(fields: Fields, html: string) {
+export function parseSearchResults(rowsSelector: Selector, fields: Fields, html: string): any[] {
   const $ = cheerio.load(html);
 
-  const titleSelector = fields.title;
-  let results = selector('title', titleSelector, $, []);
-  // todo throw on no titles
-
-  for (const field of Object.keys(fields).filter(f => f !== 'title')) {
-    const select = fields[field];
-    results = selector(field, select, $, results);
-  }
-  return results;
-}
-
-export function selector(field: string, select: Selector, $: CheerioStatic, current: object[]) {
-  if (field === 'date') {
-    debugger;
-  }
-  let results: any[] = current;
-  for (const action of Object.keys(select)) {
-    // actions return array
-    if (action === 'selector' && select.selector) {
-      const htmlResult = htmlSelector(select, $);
-      htmlResult.forEach((r, idx) => {
-        // is the first action, will have to setup results as objects
-        if (!results[idx]) {
-          results[idx] = {};
-        }
-        results[idx][field] = r;
-      });
-      continue;
+  const rows = $(rowsSelector.selector);
+  if (rowsSelector.filters) {
+    for (const filter of rowsSelector.filters) {
+      console.log(filter);
     }
-    // actions mutate array
-    results = current.map(n => {
-      if (action === 'filters' && select.filters && select.filters.length) {
-        n[field] = applyFilters(select.filters, n[field]);
+  }
+
+  const results = range(rows.length).map(() => ({}));
+  for (let idx = 0; idx < results.length; idx++) {
+    const row = rows[idx];
+    for (const field of Object.keys(fields)) {
+      const selector = fields[field];
+      if (selector.selector) {
+        const htmlResult = htmlSelector(selector, row, $);
+        results[idx][field] = htmlResult;
       }
-      if (action === 'text' && typeof select.text === 'string') {
+      if (selector.filters && selector.filters.length) {
+        results[idx][field] = applyFilters(selector.filters, results[idx][field]);
+      }
+      if (selector.text) {
         // fields are capitalized in golang template
         // TODO: pass config
-        n[field] = golangParse(select.text, { Result: n });
+        results[idx][field] = golangParse(`${selector.text}`, { Result: results[idx] });
       }
       // do this last, always resolve template on field
-      if (n[field] && n[field].length && typeof n[field] === 'string') {
-        n[field] = golangParse(n[field], { Result: n });
+      if (
+        results[idx][field] &&
+        results[idx][field].length &&
+        typeof results[idx][field] === 'string'
+      ) {
+        results[idx][field] = golangParse(results[idx][field], { Result: results[idx] });
       }
-      return n;
-    });
+    }
   }
+
   return results;
 }
 
-export function htmlSelector(select: Selector, $: CheerioStatic) {
-  return $(select.selector)
-    .map((_, el) => {
-      if (select.attribute) {
-        return $(el).attr(select.attribute);
-      }
-      return $(el).text();
-    })
-    .get();
+/**
+ * The andmatch filter will make sure that only torrents which contain all words from the search string are returned. This is helpful if the tracker returns a lot of unrelated search results.
+ */
+export function andmatch() {
+  // TODO
 }
 
-export function applyFilters(filterElements: FilterElement[], str: string): string | Date {
+export function htmlSelector(select: Selector, row: CheerioElement, $: CheerioStatic) {
+  // TODO: apply whatever RowsSelector.after is
+  const result = $(row)
+    .find($(select.selector))
+    .first();
+
+  if (select.attribute) {
+    return result.attr(select.attribute);
+  }
+  return result.text();
+}
+
+export function applyFilters(filterElements: Filters[], str: string): string | Date {
   if (!str) {
     return str;
   }
-  let result: string = str;
+  let result = str;
   for (const filter of filterElements) {
-    // multiple arg
-    if (filter.name === 'replace' && Array.isArray(filter.args) && filter.args.length === 2) {
-      result = filters.replace(result, `${filter.args[0]}`, `${filter.args[1]}`);
+    // ignore random garbage filter
+    if (filter && (filter as GarbageDateparseFilter).dateparse) {
       continue;
     }
-    if (filter.name === 'split' && Array.isArray(filter.args) && filter.args.length === 2) {
-      result = filters.split(result, `${filter.args[0]}`, Number(filter.args[1]));
+    // multiple arg
+    if (filter.name === 'replace') {
+      result = filters.replace(result, filter.args[0], filter.args[1]);
+      continue;
+    }
+    if (filter.name === 'split') {
+      result = filters.split(result, filter.args[0], Number(filter.args[1]));
+      continue;
+    }
+    if (filter.name === 're_replace') {
+      result = filters.re_replace(result, filter.args[0], filter.args[1]);
       continue;
     }
     // one arg
-    if (
-      filter.name === 'regexp' &&
-      filter.args &&
-      !Array.isArray(filter.args) &&
-      typeof filter.args === 'string'
-    ) {
+    if (filter.name === 'regexp') {
       result = filters.regexp(result, filter.args);
       continue;
     }
-    if (filter.name === 'append' && filter.args && !Array.isArray(filter.args)) {
+    if (filter.name === 'trim') {
+      result = filters.trim(result, filter.args ? filter.args : undefined);
+      continue;
+    }
+    if (filter.name === 'append') {
       result = filters.append(result, filter.args);
       continue;
     }
-    if (filter.name === 'dateparse' && filter.args && !Array.isArray(filter.args)) {
+    if (filter.name === 'dateparse') {
       // exit once its a date
-      return filters.dateparse(result, `${filter.args}`);
+      return filters.dateparse(result, filter.args);
     }
-    if (filter.name === 'prepend' && filter.args && !Array.isArray(filter.args)) {
+    if (filter.name === 'prepend') {
       result = filters.prepend(result, filter.args);
       continue;
     }
@@ -114,7 +119,7 @@ export function applyFilters(filterElements: FilterElement[], str: string): stri
       result = filters.urlencode(result);
       continue;
     }
-    // throw new Error(`Filter not implemented or args incorrect: ${filter.name}`);
+    throw new Error(`Filter not implemented: ${filter.name}`);
   }
   return result;
 }

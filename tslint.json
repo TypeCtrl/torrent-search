@@ -6,6 +6,9 @@
   "rules": {
     "semicolon": [true, "always"],
     "type-literal-delimiter": false,
-    "comment-format": false
+    "comment-format": false,
+    "typedef": false,
+    "no-unsafe-any": false,
+    "no-null-keyword": false
   }
 }
