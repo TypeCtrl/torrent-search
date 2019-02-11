@@ -1,18 +1,18 @@
+import bytes from 'bytes';
+import { format } from 'date-fns';
 import got, { GotOptions, Response } from 'got';
+import { flatten } from 'lodash';
 import { CookieJar } from 'tough-cookie';
 import uaString from 'ua-string';
-import bytes from 'bytes';
-import { URL } from 'url';
-import { flatten } from 'lodash';
+import { URL, URLSearchParams } from 'url';
 
 import { catchCloudflare } from '@ctrl/cloudflare';
 import { parse as golangParse } from '@ctrl/golang-template';
 import { definitions, TrackerDefinition } from '@ctrl/tracker-definitions';
 
-import { parseSearchResults } from './parse';
-import { format } from 'date-fns';
 import { fromUnknown } from './date';
-import { TorznabCategory, ALL_CATS } from './torznab-category';
+import { parseSearchResults } from './parse';
+import { ALL_CATS, TorznabCategory } from './torznab-category';
 
 /**
  * get definition by site
@@ -46,7 +46,11 @@ function addCategoryMapping(definition: TrackerDefinition) {
   return results;
 }
 
-export async function getSearchResults(definition: TrackerDefinition, q: string) {
+export async function getSearchResults(
+  definition: TrackerDefinition,
+  q: string,
+  categories: any[],
+) {
   const search = definition.search;
   const baseUrl = definition.links[0].endsWith('/')
     ? definition.links[0].substring(0, definition.links[0].length - 1)
@@ -70,7 +74,7 @@ export async function getSearchResults(definition: TrackerDefinition, q: string)
 
   const availableCategories = addCategoryMapping(definition);
 
-  const responses: any[] = [];
+  const responses: ReleaseInfo[] = [];
   let idx = 0;
   for (const searchPath of search.paths) {
     let path = golangParse(searchPath.path, { Config: config, Keywords: q });
@@ -82,7 +86,24 @@ export async function getSearchResults(definition: TrackerDefinition, q: string)
       for (const name of Object.keys(search.inputs)) {
         // TODO: pass config
         // TODO: imdb feature
-        query[name] = golangParse(`${search.inputs[name]}`, { Keywords: q });
+        console.log(search.inputs[name], { Keywords: q });
+        // TODO: Categories should be an array of ID's from selected cats
+        const value = golangParse(`${search.inputs[name]}`, {
+          Keywords: q,
+          Categories: categories,
+        });
+        console.log( { value });
+        if (name === '$raw') {
+          for (const part of value.split('&')) {
+            const [key, val] = part.split('=');
+            if (!key || !val) {
+              continue;
+            }
+            query[key] = val;
+          }
+          continue;
+        }
+        query[name] = value;
       }
     }
     console.log({ path, query });
@@ -97,7 +118,7 @@ export async function getSearchResults(definition: TrackerDefinition, q: string)
       // console.log(page.headers)
     }
     for (const response of parseSearchResults(search.rows, search.fields, page.body)) {
-      responses.push(finalizeFields(response, baseUrl, availableCategories));
+      responses.push(finalizeFields(response, baseUrl, availableCategories, definition));
     }
     idx += 1;
   }
@@ -107,13 +128,16 @@ export async function getSearchResults(definition: TrackerDefinition, q: string)
 }
 
 export interface ReleaseInfo {
+  Tracker: string;
+  TrackerId: string;
   Title: string;
   Guid: string | null;
   Link: string | null;
   Comments: string | null;
   PublishDate: string | null;
   Category: number[];
-  Size?: number;
+  Size: number;
+  Gain: number;
   Files: number | null;
   Grabs: number | null;
   Description: string | null;
@@ -121,20 +145,24 @@ export interface ReleaseInfo {
   TVDBId: number | null;
   Imdb: number | null;
   TMDb: number | null;
-  Seeders?: number;
+  Seeders: number;
   Peers: number | null;
   BannerUrl: string | null;
   InfoHash: string | null;
   MagnetUri: string | null;
-  MinimumRatio?: number;
-  MinimumSeedTime?: number;
+  MinimumRatio: number;
+  MinimumSeedTime: number;
   DownloadVolumeFactor?: number;
   UploadVolumeFactor?: number;
   BlackholeLink: string | null;
+  CategoryDesc: string | null;
+  /**
+   * used in cached releases
+   */
+  FirstSeen: string;
 }
 
 export function mapTrackerCatToNewznab(input: string, categories: TorznabCategory[]): number[] {
-  console.log({ input });
   if (input === null) {
     return [];
   }
@@ -144,7 +172,7 @@ export function mapTrackerCatToNewznab(input: string, categories: TorznabCategor
     // results.push(int + 100000);
     const intCat = categories.find(n => n.id === int + 100000);
     if (intCat) {
-      console.log({intCat, found: categories.filter(n => n.name === intCat.name).map(n => n.id) });
+      // console.log({ intCat, found: categories.filter(n => n.name === intCat.name).map(n => n.id) });
       return categories.filter(n => n.name === intCat.name).map(n => n.id);
     }
   }
@@ -152,16 +180,37 @@ export function mapTrackerCatToNewznab(input: string, categories: TorznabCategor
   return categories.filter(n => n.id === Number(input)).map(n => n.id);
 }
 
+export function mapTrackerCategory(categoryIds: number[], categories: TorznabCategory[]) {
+  if (!categoryIds || !categoryIds.length) {
+    return null;
+  }
+  for (const id of categoryIds) {
+    const result = categories.find(n => n.id === id);
+    if (result) {
+      return result.name;
+    }
+  }
+  return null;
+}
+
 /**
  * normalize the fields returned from the cardigann page parse
  */
-export function finalizeFields(body: any, baseUrl: string, categories: TorznabCategory[]) {
+export function finalizeFields(
+  body: any,
+  baseUrl: string,
+  categories: TorznabCategory[],
+  definition: TrackerDefinition,
+) {
   // TODO: add release interface
   const release: ReleaseInfo = {
+    Tracker: definition.name,
+    TrackerId: definition.site,
     Title: '',
     Comments: null,
     PublishDate: null,
     Category: [],
+    CategoryDesc: null,
     MagnetUri: null,
     Guid: null,
     Link: null,
@@ -176,6 +225,12 @@ export function finalizeFields(body: any, baseUrl: string, categories: TorznabCa
     BannerUrl: null,
     BlackholeLink: null,
     Peers: null,
+    MinimumRatio: 1,
+    MinimumSeedTime: 48 * 60 * 60,
+    Size: 0,
+    Seeders: 0,
+    Gain: 0,
+    FirstSeen: '0001-01-01T00:00:00',
   };
   for (const key of Object.keys(body)) {
     const value = body[key];
@@ -214,9 +269,13 @@ export function finalizeFields(body: any, baseUrl: string, categories: TorznabCa
       case 'seeders':
         const seeders = parseInt(value, 10);
         release.Seeders = seeders;
+        if (release.Peers === null) {
+          release.Peers = release.Seeders;
+        } else {
+          release.Peers += release.Seeders;
+        }
         break;
       case 'date':
-        console.log(value);
         const date = fromUnknown(value);
         // "2019-01-28T13:35:49.064149+00:00"
         release.PublishDate = format(date, "yyyy-MM-dd'T'HH:mm:ss.SSSSSSxxx");
@@ -247,10 +306,30 @@ export function finalizeFields(body: any, baseUrl: string, categories: TorznabCa
           }
         }
         break;
+      case 'minimumratio':
+        release.MinimumRatio = Number(value);
+        break;
+      case 'minimumseedtime':
+        release.MinimumSeedTime = Number(value);
+        break;
+      case 'downloadvolumefactor':
+        release.DownloadVolumeFactor = Number(value);
+        break;
+      case 'uploadvolumefactor':
+        release.UploadVolumeFactor = Number(value);
+        break;
+      case 'imdb':
+        release.Imdb = Number(value);
+        break;
       default:
         console.log(key);
       // throw new Error("I HAVE NO HANDLER. I CAN'T BE HANDLED");
     }
   }
+
+  release.Peers = (release.Peers || -1) - (release.Seeders || 0);
+  const sizeInGB = release.Size / 1024.0 / 1024.0 / 1024.0;
+  release.Gain = release.Seeders * sizeInGB;
+  release.CategoryDesc = mapTrackerCategory(release.Category, categories);
   return release;
 }

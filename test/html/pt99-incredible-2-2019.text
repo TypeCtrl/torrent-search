@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="referrer" content="no-referrer" />
+<meta name="keywords" content="BT,下载,电影,电视剧,天空,HDSKY,ttg,ob,馒头,北洋,南洋,PT,种子" />
+<meta name="generator" content="NexusPHP" />
+<title>PT99 :: 搜索结果 - incredible PT99|下载|电影|电视剧 - Powered by NexusPHP</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="search" type="application/opensearchdescription+xml" title="PT99 Torrents" href="opensearch.php" />
+<link rel="stylesheet" href="styles/buttons.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="styles/common.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="styles/mediumfont.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="styles/sprites.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="pic/forum_pic/chs/forumsprites.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="styles/Classic/theme.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="styles/Classic/DomTT.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="styles/curtain_imageresizer.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="pic/category/chd/scenetorrents/catsprites.css?111112311222" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="Latest Torrents" href="torrentrss.php" />
+<script type="text/javascript" src="jquery-3.3.1.min.js?111112311222"></script>
+<script type="text/javascript" src="curtain_imageresizer.js?111112311222"></script>
+<script type="text/javascript" src="ajaxbasic.js?111112311222"></script>
+<script type="text/javascript" src="common.js?111112311222"></script>
+<script type="text/javascript" src="domLib.js?111112311222"></script>
+<script type="text/javascript" src="domTT.js?111112311222"></script>
+<script type="text/javascript" src="domTT_drag.js?111112311222"></script>
+<script type="text/javascript" src="fadomatic.js?111112311222"></script>
+<script type="text/javascript" src="laydate/laydate.js?111112311222"></script>
+</head>
+<body>
+<table class="head" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td class="clear">
+			<div class="logo">PT99</div>
+			<div class="slogan">An Average PT</div>
+		</td>
+		<td class="clear nowrap" align="right" valign="middle">
+		</td>
+	</tr>
+</table>
+
+<table class="mainouter" width="982" cellspacing="0" cellpadding="5" align="center">
+	<tr><td id="nav_block" class="text" align="center">
+<table class="main" width="940" border="0" cellspacing="0" cellpadding="0"><tr><td class="embedded" ><div id="nav"><ul id="mainmenu" class="menu"><li><a href="index.php">&nbsp;首&nbsp;&nbsp;页&nbsp;</a></li><li><a href="forums.php">&nbsp;论&nbsp;&nbsp;坛&nbsp;</a></li><li class="selected"><a href="torrents.php">&nbsp;种&nbsp;&nbsp;子&nbsp;</a></li><li><a href="mybonusapps.php">游戏</a></li><li><a href="offers.php">&nbsp;候&nbsp;&nbsp;选&nbsp;</a></li><li><a href="upload.php">&nbsp;发&nbsp;&nbsp;布&nbsp;</a></li><li><a href="subtitles.php">&nbsp;字&nbsp;&nbsp;幕&nbsp;</a></li><li><a href="usercp.php">&nbsp;控制面板&nbsp;</a></li><li><a href="topten.php">排&nbsp;行&nbsp;榜</a></li><li><a href="log.php">&nbsp;日&nbsp;&nbsp;志&nbsp;</a></li><li><a href="rules.php">&nbsp;规&nbsp;&nbsp;则&nbsp;</a></li><li><a href="faq.php">&nbsp;常见问题&nbsp;</a></li><li><a href="staff.php">管&nbsp;理&nbsp;组</a></li></ul></div></td></tr></table>
+
+<table id="info_block" cellpadding="4" cellspacing="0" border="0" width="100%"><tr>
+	<td>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+		        <td class="bottom" align="left">
+                    <span class="medium">欢迎回来, <span class="nowrap"><a  href="userdetails.php?id=1234" class='User_Name'><b>fakeUsername</b></a></span>                        [<a href="logout.php">退出</a>]
+                                                                        [<a href="torrents.php?inclbookmarked=1&amp;allsec=1&amp;incldead=0">收藏</a>]
+                        <font class = 'color_bonus'>魔力值 </font>
+                        [<a href="mybonus.php">使用</a>]: <span id="seedbonus">0.0</span>
+                        <font class = 'color_invite'>邀请 </font>[<a href="invite.php?id=1234">
+                            发送</a>]: 0                        <span id="check_in" title="今日签到可获得10魔力值">
+                                                            [<a href="javascript: check_in();">签到</a>]
+                                                    </span>
+                        &nbsp;&nbsp;[<a href="promotionlink.php"><font class="color_invite">宣传获魔力</font></a>]
+                        <br />
+	<font class="color_ratio">分享率：</font> ---                        <font class='color_uploaded'>上传量：</font> 0.00 KB                        <font class='color_downloaded'> 下载量：</font> 0.00 KB                        <font class="color_active">&nbsp;H&R: </font><a href="myhr.php"><font color='red'>0</font>/0</a>&nbsp;
+                        <font class='color_active'>当前活动：</font>
+                        <img class="arrowup" alt="Torrents seeding" title="当前做种" src="pic/trans.gif" />0                        <img class="arrowdown" alt="Torrents leeching" title="当前下载" src="pic/trans.gif" />0&nbsp;&nbsp;
+                        <font class='color_connectable'>可连接：</font>未知 <font class='color_slots'>连接数：</font>无限制</span></td>
+
+	<td class="bottom" align="right"><span class="medium" ><span id="curtimeSpan" data-time="1549842231">当前时间：2019-02-11 07:43:51</span><br />
+
+<a href="messages.php"><img class="inbox" src="pic/trans.gif" alt="inbox" title="收件箱&nbsp;(无新短讯)" /></a> 2 (0 新)  <a href="messages.php?action=viewmailbox&amp;box=-1"><img class="sentbox" alt="sentbox" title="发件箱" src="pic/trans.gif" /></a> 0 <a href="friends.php"><img class="buddylist" alt="Buddylist" title="社交名单" src="pic/trans.gif" /></a> <a href="getrss.php"><img class="rss" alt="RSS" title="获取RSS" src="pic/trans.gif" /></a>
+	</span></td>
+	</tr></table></td>
+</tr></table>
+
+</td></tr>
+
+<tr><td id="outer" align="center" class="outer" style="padding-top: 20px; padding-bottom: 20px">
+<div align="center" style="margin-bottom: 10px" id="ad_belownav"><b><font size="5"><span style="color: Red;"><a href="adredir.php?id=1&amp;url=http%3A%2F%2Fpt.j99.info%2Fforums.php%3Faction%3Dviewtopic%26amp%3Btopicid%3D116" target="_blank">招贤纳士(长期有效)</a></span> <span style="color: Red;"><br />
+ 目前全站H&amp;R：单种下载后需在15天内必须做种36小时或者分享率达到1.0才可删除。 </font></b></span></div><table width="1080" class="main" border="0" cellspacing="0" cellpadding="0"><tr><td class="embedded"><form method="get" name="searchbox" action="?">
+	<table border="1" class="searchbox" cellspacing="0" cellpadding="5" width="100%">
+		<tbody>
+		<tr>
+		<td class="colhead" align="center" colspan="2"><a href="javascript: klappe_news('searchboxmain')"><img class="plus" src="pic/trans.gif" id="picsearchboxmain" alt="Show/Hide" />搜索箱</a></td>
+		</tr></tbody>
+		<tbody id="ksearchboxmain" style="display: none;">
+		<tr>
+			<td class="rowfollow" align="left">
+				<table>
+					<tr><td class="embedded" colspan="10" align="left"><b>类型:</b></td></tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat401" name="cat401" value="1" /><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat404" name="cat404" value="1" /><a href="?cat=404"><img class="c_doc" src="pic/cattrans.gif" alt="Documentaries(记录片)" title="Documentaries(记录片)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat405" name="cat405" value="1" /><a href="?cat=405"><img class="c_anime" src="pic/cattrans.gif" alt="Animations(动漫)" title="Animations(动漫)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat402" name="cat402" value="1" /><a href="?cat=402"><img class="c_tvseries" src="pic/cattrans.gif" alt="TV Series(电视剧)" title="TV Series(电视剧)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat403" name="cat403" value="1" /><a href="?cat=403"><img class="c_tvshows" src="pic/cattrans.gif" alt="TV Shows(电视节目)" title="TV Shows(电视节目)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat406" name="cat406" value="1" /><a href="?cat=406"><img class="c_mv" src="pic/cattrans.gif" alt="Music Videos(音乐视频)" title="Music Videos(音乐视频)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat407" name="cat407" value="1" /><a href="?cat=407"><img class="c_sports" src="pic/cattrans.gif" alt="Sports(体育节目)" title="Sports(体育节目)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat408" name="cat408" value="1" /><a href="?cat=408"><img class="c_hqaudio" src="pic/cattrans.gif" alt="HQ Audio" title="HQ Audio" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat410" name="cat410" value="1" /><a href="?cat=410"><img src="pic/cattrans.gif" alt="Music(音乐)" title="Music(音乐)" style="background-image: url(pic/category/chd/scenetorrents/chs/music.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat411" name="cat411" value="1" /><a href="?cat=411"><img src="pic/cattrans.gif" alt="Software(软件)" title="Software(软件)" style="background-image: url(pic/category/chd/scenetorrents/chs/appz.png);" /></a></td>
+</tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat412" name="cat412" value="1" /><a href="?cat=412"><img src="pic/cattrans.gif" alt="Document(文档)" title="Document(文档)" style="background-image: url(pic/category/chd/scenetorrents/chs/dox.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat413" name="cat413" value="1" /><a href="?cat=413"><img src="pic/cattrans.gif" alt="PC_Game(PC游戏)" title="PC_Game(PC游戏)" style="background-image: url(pic/category/chd/scenetorrents/chs/games_pc.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat414" name="cat414" value="1" /><a href="?cat=414"><img src="pic/cattrans.gif" alt="Other_Game(其他游戏)" title="Other_Game(其他游戏)" style="background-image: url(pic/category/chd/scenetorrents/chs/games_other.png);" /></a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="cat409" name="cat409" value="1" /><a href="?cat=409"><img class="c_misc" src="pic/cattrans.gif" alt="Misc(其他)" title="Misc(其他)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td colspan="2" class="bottom" align="left" style="padding-left: 15px"><input name="cat_check" value='全选' class="btn medium" type="button" onclick="javascript:SetChecked('cat','cat_check','全选','全不选',-1,10)" /></td>
+</tr><tr><td class="embedded" colspan="10" align="left"><b>媒介:</b></td></tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium1" name="medium1" value="1" /><a title="UHD Blu-ray" href="?medium=1">UHD Blu-ray</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium2" name="medium2" value="1" /><a title="UHD Blu-ray/DIY" href="?medium=2">UHD Blu-ray/DIY</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium3" name="medium3" value="1" /><a title="Blu-ray" href="?medium=3">Blu-ray</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium4" name="medium4" value="1" /><a title="Blu-ray/DIY" href="?medium=4">Blu-ray/DIY</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium5" name="medium5" value="1" /><a title="Remux" href="?medium=5">Remux</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium6" name="medium6" value="1" /><a title="Encode" href="?medium=6">Encode</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium7" name="medium7" value="1" /><a title="HDTV" href="?medium=7">HDTV</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium8" name="medium8" value="1" /><a title="DVDR" href="?medium=8">DVDR</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium9" name="medium9" value="1" /><a title="CD" href="?medium=9">CD</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium10" name="medium10" value="1" /><a title="MiniBD" href="?medium=10">MiniBD</a></td>
+</tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium11" name="medium11" value="1" /><a title="Track" href="?medium=11">Track</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium12" name="medium12" value="1" /><a title="WEB-DL" href="?medium=12">WEB-DL</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="medium13" name="medium13" value="1" /><a title="HD DVD" href="?medium=13">HD DVD</a></td>
+<td colspan="2" class="bottom" align="left" style="padding-left: 15px"><input name="medium_check" value='全选' class="btn medium" type="button" onclick="javascript:SetChecked('medium','medium_check','全选','全不选',-1,10)" /></td>
+</tr><tr><td class="embedded" colspan="10" align="left"><b>编码:</b></td></tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec1" name="codec1" value="1" /><a title="H.264/AVC" href="?codec=1">H.264/AVC</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec2" name="codec2" value="1" /><a title="VC-1" href="?codec=2">VC-1</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec3" name="codec3" value="1" /><a title="Xvid" href="?codec=3">Xvid</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec4" name="codec4" value="1" /><a title="MPEG-2" href="?codec=4">MPEG-2</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec5" name="codec5" value="1" /><a title="Other" href="?codec=5">Other</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec6" name="codec6" value="1" /><a title="x265" href="?codec=6">x265</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec7" name="codec7" value="1" /><a title="x264" href="?codec=7">x264</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="codec8" name="codec8" value="1" /><a title="HEVC" href="?codec=8">HEVC</a></td>
+<td colspan="2" class="bottom" align="left" style="padding-left: 15px"><input name="codec_check" value='全选' class="btn medium" type="button" onclick="javascript:SetChecked('codec','codec_check','全选','全不选',-1,10)" /></td>
+</tr><tr><td class="embedded" colspan="10" align="left"><b>音频编码:</b></td></tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec1" name="audiocodec1" value="1" /><a title="FLAC" href="?audiocodec=1">FLAC</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec2" name="audiocodec2" value="1" /><a title="APE" href="?audiocodec=2">APE</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec3" name="audiocodec3" value="1" /><a title="DTS" href="?audiocodec=3">DTS</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec4" name="audiocodec4" value="1" /><a title="MP3" href="?audiocodec=4">MP3</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec5" name="audiocodec5" value="1" /><a title="OGG" href="?audiocodec=5">OGG</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec6" name="audiocodec6" value="1" /><a title="AAC" href="?audiocodec=6">AAC</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec7" name="audiocodec7" value="1" /><a title="Other" href="?audiocodec=7">Other</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec8" name="audiocodec8" value="1" /><a title="DTS-HDMA" href="?audiocodec=8">DTS-HDMA</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec9" name="audiocodec9" value="1" /><a title="DTS-HDMA:X 7.1" href="?audiocodec=9">DTS-HDMA:X 7.1</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec10" name="audiocodec10" value="1" /><a title="TrueHD Atmos" href="?audiocodec=10">TrueHD Atmos</a></td>
+</tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec11" name="audiocodec11" value="1" /><a title="TrueHD" href="?audiocodec=11">TrueHD</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec12" name="audiocodec12" value="1" /><a title="LPCM" href="?audiocodec=12">LPCM</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec13" name="audiocodec13" value="1" /><a title="AC3/DD" href="?audiocodec=13">AC3/DD</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec14" name="audiocodec14" value="1" /><a title="DTS-HD HR" href="?audiocodec=14">DTS-HD HR</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="audiocodec15" name="audiocodec15" value="1" /><a title="WAV" href="?audiocodec=15">WAV</a></td>
+<td colspan="2" class="bottom" align="left" style="padding-left: 15px"><input name="audiocodec_check" value='全选' class="btn medium" type="button" onclick="javascript:SetChecked('audiocodec','audiocodec_check','全选','全不选',-1,10)" /></td>
+</tr><tr><td class="embedded" colspan="10" align="left"><b>分辨率:</b></td></tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="standard1" name="standard1" value="1" /><a title="4K/2160p" href="?standard=1">4K/2160p</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="standard2" name="standard2" value="1" /><a title="2K/1080p" href="?standard=2">2K/1080p</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="standard3" name="standard3" value="1" /><a title="1080i" href="?standard=3">1080i</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="standard4" name="standard4" value="1" /><a title="SD" href="?standard=4">SD</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="standard5" name="standard5" value="1" /><a title="720p" href="?standard=5">720p</a></td>
+<td colspan="2" class="bottom" align="left" style="padding-left: 15px"><input name="standard_check" value='全选' class="btn medium" type="button" onclick="javascript:SetChecked('standard','standard_check','全选','全不选',-1,10)" /></td>
+</tr><tr><td class="embedded" colspan="10" align="left"><b>制作组:</b></td></tr><tr><td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="team7" name="team7" value="1" /><a title="99TV" href="?team=7">99TV</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="team6" name="team6" value="1" /><a title="FLTTH" href="?team=6">FLTTH</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="team1" name="team1" value="1" /><a title="HDS" href="?team=1">HDS</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="team2" name="team2" value="1" /><a title="CHD" href="?team=2">CHD</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="team3" name="team3" value="1" /><a title="MySiLU" href="?team=3">MySiLU</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="team4" name="team4" value="1" /><a title="WiKi" href="?team=4">WiKi</a></td>
+<td align="left" class="bottom" style="padding-bottom: 4px; padding-left: 7px;"><input type="checkbox" id="team5" name="team5" value="1" /><a title="Other" href="?team=5">Other</a></td>
+<td colspan="2" class="bottom" align="left" style="padding-left: 15px"><input name="team_check" value='全选' class="btn medium" type="button" onclick="javascript:SetChecked('team','team_check','全选','全不选',-1,10)" /></td>
+</tr>				</table>
+			</td>
+
+			<td class="rowfollow" valign="middle">
+				<table>
+					<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<font class="medium">显示断种/活种？</font>
+						</td>
+				 	</tr>
+					<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<select class="med" name="incldead" style="width: 100px;">
+								<option value="0">包括断种</option>
+								<option value="1">活种 </option>
+								<option value="2">断种</option>
+							</select>
+						</td>
+				 	</tr>
+				 	<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<br />
+						</td>
+				 	</tr>
+					<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<font class="medium">显示促销种子？</font>
+						</td>
+				 	</tr>
+				 	<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<select class="med" name="spstate" style="width: 100px;">
+								<option value="0">全部</option>
+<option value="1">普通</option><option value="2">免费</option><option value="3">2X</option><option value="4">2X免费</option><option value="5">50%</option><option value="6">2X 50%</option><option value="7">30%</option>							</select>
+						</td>
+					</tr>
+				 	<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<br />
+						</td>
+					</tr>
+					<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<font class="medium">显示收藏？</font>
+						</td>
+				 	</tr>
+				 	<tr>
+						<td class="bottom" style="padding: 1px;padding-left: 10px">
+							<select class="med" name="inclbookmarked" style="width: 100px;">
+								<option value="0">全部</option>
+								<option value="1">仅收藏</option>
+								<option value="2">仅未收藏</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td class="rowfollow" align="center">
+				<table>
+					<tr>
+						<td class="embedded">
+							搜索关键字:&nbsp;&nbsp;
+						</td>
+						<td class="embedded">
+							<table>
+								<tr>
+									<td class="embedded">
+										<input id="searchinput" name="search" type="text" value="incredible" autocomplete="off" style="width: 200px" ondblclick="suggest(event.keyCode,this.value);" onkeyup="suggest(event.keyCode,this.value);" onkeypress="return noenter(event.keyCode);"/>
+										<script src="suggest.js" type="text/javascript"></script>
+										<div id="suggcontainer" style="text-align: left; width:100px;  display: none;">
+											<div id="suggestions" style="width:204px; border: 1px solid rgb(119, 119, 119); cursor: default; position: absolute; color: rgb(0,0,0); background-color: rgb(255, 255, 255);"></div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="embedded">
+							&nbsp; 范围：
+							<select name="search_area">
+								<option value="0">标题</option>
+								<option value="1">简介</option>
+																<option value="3">发布者</option>
+								<option value="4">IMDb链接</option>
+							</select>
+
+							 匹配模式：
+							<select name="search_mode" style="width: 60px;">
+								<option value="0">与</option>
+								<option value="1">或</option>
+								<option value="2">准确</option>
+							</select>
+
+													</td>
+					</tr>
+<tr><td class="embedded" colspan="3">&nbsp;&nbsp;<a href="?search=%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83&amp;notnewword=1"><u>流浪地球</u></a>&nbsp;&nbsp;<a href="?search=%E6%B5%B7%E7%8E%8B&amp;notnewword=1"><u>海王</u></a>&nbsp;&nbsp;<a href="?search=%E5%B0%8F%E5%81%B7%E5%AE%B6%E6%97%8F&amp;notnewword=1"><u>小偷家族</u></a>&nbsp;&nbsp;<a href="?search=4k&amp;notnewword=1"><u>4k</u></a>&nbsp;&nbsp;<a href="?search=%E6%97%A0%E9%97%B4%E9%81%93&amp;notnewword=1"><u>无间道</u></a>&nbsp;&nbsp;<a href="?search=%E5%90%88%E9%9B%86&amp;notnewword=1"><u>合集</u></a>&nbsp;&nbsp;<a href="?search=%E6%AF%92%E6%B6%B2&amp;notnewword=1"><u>毒液</u></a>&nbsp;&nbsp;<a href="?search=%E7%A2%9F%E4%B8%AD%E8%B0%8D&amp;notnewword=1"><u>碟中谍</u></a>&nbsp;&nbsp;<a href="?search=%E7%94%9F%E5%8C%96%E5%8D%B1%E6%9C%BA&amp;notnewword=1"><u>生化危机</u></a>&nbsp;&nbsp;<a href="?search=%E6%80%92%E6%99%B4%E6%B9%98%E8%A5%BF&amp;notnewword=1"><u>怒晴湘西</u></a>&nbsp;&nbsp;<a href="?search=%E9%9F%B3%E4%B9%90&amp;notnewword=1"><u>音乐</u></a>&nbsp;&nbsp;<a href="?search=%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD&amp;notnewword=1"><u>黑客帝国</u></a>&nbsp;&nbsp;<a href="?search=2019&amp;notnewword=1"><u>2019</u></a>&nbsp;&nbsp;<a href="?search=%E4%B8%89%E7%BA%A7&amp;notnewword=1"><u>三级</u></a>&nbsp;&nbsp;<a href="?search=%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C&amp;notnewword=1"><u>冰与火之歌</u></a>&nbsp;&nbsp;</td></tr>				</table>
+			</td>
+			<td class="rowfollow" align="center">
+				<input type="submit" class="btn" value="给我搜" />
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	</form>
+<div align="center" style="margin-top: 10px" id="ad_belowsearchbox"></div><p align="center"><font class="gray"><b title="Alt+Pageup">&lt;&lt;&nbsp;上一页</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="gray"><b title="Alt+Pagedown">下一页&nbsp;&gt;&gt;</b></font><br /><font class="gray"><b>1&nbsp;-&nbsp;6</b></font></p>
+<p align='center'>快速搜索:&nbsp;&nbsp;</b><a href='torrents.php?spstate=2' title='查看免费种子'><font class='free'>免费</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=3' title='查看两倍上传量种子'><font class='twoup'>2倍上传</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=4' title='查看免费且两倍上传种子'><font class='twoupfree'>免费&2倍上传</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=5' title='查看50%下载种子'><font class='halfdown'>50%下载</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=6' title='查看50%下载且两倍上传种子'><font class='twouphalfdown'>50%下载&2倍上传</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=7' title='查看30%下载种子'><font class='thirtypercent'>30%下载</font></a></p><table class="torrents" cellspacing="0" cellpadding="5" width="100%">
+<tr>
+<td class="colhead" style="padding: 0px">类型</td>
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=1&amp;type=asc">标题</a></td>
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=3&amp;type=desc"><img class="comments" src="pic/trans.gif" alt="comments" title="评论数" /></a></td>
+
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=4&amp;type=desc"><img class="time" src="pic/trans.gif" alt="time" title="存活时间" /></a></td>
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=5&amp;type=desc"><img class="size" src="pic/trans.gif" alt="size" title="大小" /></a></td>
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=7&amp;type=desc"><img class="seeders" src="pic/trans.gif" alt="seeders" title="种子数" /></a></td>
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=8&amp;type=desc"><img class="leechers" src="pic/trans.gif" alt="leechers" title="下载数" /></a></td>
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=6&amp;type=desc"><img class="snatched" src="pic/trans.gif" alt="snatched" title="完成数" /></a></td>
+<td class="colhead"><a href="?incldead=0&amp;spstate=0&amp;inclbookmarked=0&amp;search=incredible&amp;search_area=0&amp;search_mode=0&amp;sort=9&amp;type=desc">发布者</a></td>
+<td class="colhead">进度</td>
+</tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><img class="sticky" src="pic/trans.gif" alt="Sticky" title="置顶" />&nbsp;<a style="color:#000000;" title="The Incredible Monk III 2019 4K WEB-DL H265 AAC 2Audio-99TV"  href="details.php?id=1414&amp;hit=1"><b>The Incredible Monk III 2019 4K WEB-DL H265 AAC 2Audio-99TV</b></a><br /><div style=" display:inline-block;height:14px;line-height: 14px;padding-right: 5px;margin-top: 3px;"><a class="tag tag_official">官方</a><a  class="tag tag_mandarin" style="margin-left: 3px;">国语</a><a  class="tag tag_chinese" style="margin-left: 3px;">中字</a></div>济公之降龙有悔 | 主演: 陈浩民 / 林子聪 / 徐申东 / 苑琼丹 | 国粤双语</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1414"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark0"  href="javascript: bookmark(1414,0);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><b><a href="details.php?id=1414&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2019-02-07 00:10:09">4天<br />7时</span></td><td class="rowfollow">2.48<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1414&amp;hit=1&amp;dllist=1#seeders">30</a></b></td>
+<td class="rowfollow">0</td>
+<td class="rowfollow"><a href="viewsnatches.php?id=1414"><b>39</b></a></td>
+<td class="rowfollow"><i>匿名</i></td>
+    <td class="rowfollow"></td>
+    </tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><img class="sticky" src="pic/trans.gif" alt="Sticky" title="置顶" />&nbsp;<a style="color:#000000;" title="The Incredible Monk III 2019 4K WEB-DL H264 AAC 2Audio-99TV"  href="details.php?id=1413&amp;hit=1"><b>The Incredible Monk III 2019 4K WEB-DL H264 AAC 2Audio-99TV</b></a><br /><div style=" display:inline-block;height:14px;line-height: 14px;padding-right: 5px;margin-top: 3px;"><a class="tag tag_official">官方</a><a  class="tag tag_mandarin" style="margin-left: 3px;">国语</a><a  class="tag tag_chinese" style="margin-left: 3px;">中字</a></div>济公之降龙有悔 | 主演: 陈浩民 / 林子聪 / 徐申东 / 苑琼丹 | 国粤双语</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1413"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark1"  href="javascript: bookmark(1413,1);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=1413&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2019-02-07 00:04:18">4天<br />7时</span></td><td class="rowfollow">3.36<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1413&amp;hit=1&amp;dllist=1#seeders">25</a></b></td>
+<td class="rowfollow">0</td>
+<td class="rowfollow"><a href="viewsnatches.php?id=1413"><b>33</b></a></td>
+<td class="rowfollow"><i>匿名</i></td>
+    <td class="rowfollow"></td>
+    </tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 1080p BluRay x264 DTS-WiKi"  href="details.php?id=189&amp;hit=1"><b>The Incredibles 2 2018 1080p BluRay x264 DTS-WiKi&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <b>[<font class='hot'>热门</font>]</b> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />[超人总动员2/「超人家庭强势回归 组团拯救炫酷世界」] *（公映）国台粤英4声轨 *内封中英双语字幕</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=189"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark2"  href="javascript: bookmark(189,2);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><b><a href="details.php?id=189&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2018-11-06 13:48:22">3月<br />6天</span></td><td class="rowfollow">11.20<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=189&amp;hit=1&amp;dllist=1#seeders">1</a></b></td>
+<td class="rowfollow">0</td>
+<td class="rowfollow"><a href="viewsnatches.php?id=189"><b>20</b></a></td>
+<td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=375" class='User_Name'><b>JOJO</b></a></span></td>
+    <td class="rowfollow"></td>
+    </tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 BluRay 1080p DDP7 1 x264-TnP"  href="details.php?id=184&amp;hit=1"><b>The Incredibles 2 2018 BluRay 1080p DDP7 1 x264-TnP&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <b>[<font class='hot'>热门</font>]</b> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=184"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark3"  href="javascript: bookmark(184,3);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><b><a href="details.php?id=184&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2018-11-06 09:54:53">3月<br />6天</span></td><td class="rowfollow">12.61<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=184&amp;hit=1&amp;dllist=1#seeders">1</a></b></td>
+<td class="rowfollow">0</td>
+<td class="rowfollow"><a href="viewsnatches.php?id=184"><b>26</b></a></td>
+<td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=1488" class='User_Name'><b>XDY</b></a></span></td>
+    <td class="rowfollow"></td>
+    </tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="[OurBits] [89316] The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-wezjh@OurBits"  href="details.php?id=18&amp;hit=1"><b>[OurBits] [89316] The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-H..&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2[DIY简繁/简繁双语字幕]</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=18"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark4"  href="javascript: bookmark(18,4);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=18&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2018-11-03 10:18:18">3月<br />9天</span></td><td class="rowfollow">43.94<br />GB</td><td class="rowfollow"><span class="red">0</span></td>
+<td class="rowfollow">0</td>
+<td class="rowfollow">0</td>
+<td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=2" class='VIP_Name'><b>wshiny</b></a><img class="star" src="pic/trans.gif" alt="Donor" style='margin-left: 2pt' /></span></td>
+    <td class="rowfollow"></td>
+    </tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=405"><img class="c_anime" src="pic/cattrans.gif" alt="Animations(动漫)" title="Animations(动漫)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-Highvoltage"  href="details.php?id=9&amp;hit=1"><b>The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-Highvoltage&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2/超人特攻队2(台)/超人特工队2(港) 【巴版原盘 国语中字】</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=9"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark5"  href="javascript: bookmark(9,5);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=9&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2018-11-02 09:58:56">3月<br />10天</span></td><td class="rowfollow">43.79<br />GB</td><td class="rowfollow"><span class="red">0</span></td>
+<td class="rowfollow">0</td>
+<td class="rowfollow"><a href="viewsnatches.php?id=9"><b>1</b></a></td>
+<td class="rowfollow"><i>匿名</i></td>
+    <td class="rowfollow"></td>
+    </tr>
+</table><p align="center"><font class="gray"><b>1&nbsp;-&nbsp;6</b></font><br /><font class="gray"><b title="Alt+Pageup">&lt;&lt;&nbsp;上一页</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="gray"><b title="Alt+Pagedown">下一页&nbsp;&gt;&gt;</b></font></p>
+</td></tr></table><script >
+    (function($){
+        var timeOut = $('.timeCountdown');
+        $.each(timeOut,function(index,item){
+            var time = $(item).attr('data-time');
+            timeCountdown(item,time)
+        })
+        function timeCountdown(that,time){
+            setTimeout(function(){
+                if(time <=0){
+                    $(that).remove();
+                    return false;
+                }
+                var day = Math.floor(time/86400);
+                var hour = Math.floor(time/3600%24);
+                var minute = Math.floor(time/60%60);
+                var second = Math.floor(time%60);
+                var dayHtml = day+'天';
+                if(hour <10){
+                    hour = '0'+hour;
+                }
+                var hourHtml = hour+'小时';
+                if(minute <10){
+                    minute='0'+minute;
+                }
+                var minHtml = minute+'分钟';
+                if(second <10){
+                    second ='0'+second;
+                }
+                var secHtml = second+'秒';
+                that.innerHTML="结束:"+dayHtml+hourHtml+minHtml+secHtml;
+                time--;
+                timeCountdown(that,time)
+            },1000)
+        }
+    })(jQuery);
+</script>
+</td></tr></table><div id="footer"><div style="margin-top: 10px; margin-bottom: 30px;" align="center"> (c)  <a href="http://pt.j99.info" target="_self">PT99</a> 2018-2019 Powered by <a href="aboutnexus.php">NexusPHP</a><br /><br />[page created in <b> 0.004429 </b> sec with <b>18</b> db queries, <b>27</b> reads and <b>1</b> writes of memcached and <b>1.97 MB</b> ram]</div>
+<div style="display: none;" id="lightbox" class="lightbox"></div><div style="display: none;" id="curtain" class="curtain"></div>
+<script type="text/javascript">
+//<![CDATA[
+var maxpage=0;
+var currentpage=0;
+//]]>
+</script>
+</div>
+<script src="https://s23.cnzz.com/z_stat.php?id=1275837412&web_id=1275837412" language="JavaScript"></script>
+<script>currTime(document.getElementById('curtimeSpan').getAttribute('data-time'));</script></body></html>
