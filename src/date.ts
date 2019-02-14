@@ -7,7 +7,11 @@ const yesterdayRegexp = /\byesterday([\s,]*|$)/i;
 const missingYearRegexp = /^(\d{1,2}-\d{1,2})(\s|$)/;
 const missingYearRegexp2 = /^(\d{1,2}\s+\w{3})\s+(\d{1,2}\:\d{1,2}.*)$/;
 
-export function fromUnknown(value: string) {
+export function fromUnknown(value: string | number) {
+  if (typeof value === 'number') {
+    return new Date(value);
+  }
+  console.log({ value });
   const str = value.trim();
   if (str.toLowerCase().includes('now')) {
     return new Date();
@@ -19,7 +23,7 @@ export function fromUnknown(value: string) {
   }
 
   // TODO: not this
-  return new Date();
+  return new Date(value);
 }
 
 export function fromTimeAgo(strTimeAgo: string) {

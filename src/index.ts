@@ -1,10 +1,10 @@
 import bytes from 'bytes';
-import { format } from 'date-fns';
 import got, { GotOptions, Response } from 'got';
 import { flatten } from 'lodash';
 import { CookieJar } from 'tough-cookie';
 import uaString from 'ua-string';
-import { URL, URLSearchParams } from 'url';
+import { URL } from 'url';
+import { format } from 'date-fns-tz';
 
 import { catchCloudflare } from '@ctrl/cloudflare';
 import { parse as golangParse } from '@ctrl/golang-template';
@@ -244,7 +244,7 @@ export function finalizeFields(
           // might need to parse URI?
           release.MagnetUri = value;
         } else {
-          release.Link = `${baseUrl}${value}`;
+          release.Link = new URL(value, baseUrl).toString();
         }
         break;
       case 'magnet':
@@ -278,7 +278,7 @@ export function finalizeFields(
       case 'date':
         const date = fromUnknown(value);
         // "2019-01-28T13:35:49.064149+00:00"
-        release.PublishDate = format(date, "yyyy-MM-dd'T'HH:mm:ss.SSSSSSxxx");
+        release.PublishDate = format(date, "yyyy-MM-dd'T'HH:mm:ss.SSSSSSxxx", { timeZone: 'Etc/UTC' });
         break;
       case 'details':
         const url = new URL(value, baseUrl);

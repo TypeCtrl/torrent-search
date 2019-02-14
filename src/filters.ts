@@ -5,6 +5,8 @@
 import filenamify from 'filenamify';
 import { parse } from 'date-fns';
 import { trim as ltrim } from 'lodash';
+import queryString from 'query-string';
+import { format } from 'date-fns-tz';
 
 export function regexp(str: string, regExpStr: string): string {
   const exp = new RegExp(regExpStr);
@@ -30,6 +32,10 @@ export function validfilename(str: string, replacement = '_'): string {
 
 export function urlencode(str: string) {
   return encodeURI(str);
+}
+
+export function querystring(str: string, field: string) {
+  return queryString.parse(str)[field] as string || '';
 }
 
 export function re_replace(str: string, searchValue: string, replaceValue: string) {
@@ -63,10 +69,10 @@ export function dateparse(str: string, layout: string) {
   pattern = pattern.replace('01', 'MM');
 
   // day
-  pattern = pattern.replace('Monday', 'dddd');
-  pattern = pattern.replace('Mon', 'ddd');
+  pattern = pattern.replace('Monday', 'EEEE');
+  pattern = pattern.replace('Mon', 'EEE');
   pattern = pattern.replace('02', 'dd');
-  //pattern = pattern.replace("_2", ""); // space padding not supported nativly by C#?
+  // pattern = pattern.replace("_2", ""); // space padding not supported nativly by C#?
   pattern = pattern.replace('2', 'd');
 
   // hours/minutes/seconds
@@ -101,24 +107,26 @@ export function dateparse(str: string, layout: string) {
 
   // timezones
   // these might need further tuning
-  //pattern = pattern.replace("MST", "");
-  //pattern = pattern.replace("Z07:00:00", "");
+  // pattern = pattern.replace("MST", "");
+  // pattern = pattern.replace("Z07:00:00", "");
   pattern = pattern.replace('Z07:00', "'Z'zzz");
   pattern = pattern.replace('Z07', "'Z'zz");
-  //pattern = pattern.replace("Z070000", "");
-  //pattern = pattern.replace("Z0700", "");
+  // pattern = pattern.replace("Z070000", "");
+  // pattern = pattern.replace("Z0700", "");
   pattern = pattern.replace('Z07:00', "'Z'zzz");
   pattern = pattern.replace('Z07', "'Z'zz");
-  //pattern = pattern.replace("-07:00:00", "");
+  // pattern = pattern.replace("-07:00:00", "");
   pattern = pattern.replace('-07:00', 'zzz');
-  //pattern = pattern.replace("-0700", "zz");
+  // pattern = pattern.replace("-0700", "zz");
   pattern = pattern.replace('-07', 'zz');
+
   try {
     const result = parse(trimmed, pattern, new Date());
+    console.log(trimmed, pattern, result.toISOString(), format(result, "T", { timeZone: 'Etc/UTC' }));
     if ((result as any) === 'Invalid Date') {
       throw new Error(`Error while parsing date ${str} using ${layout}`);
     }
-    return result;
+    return Number(format(result, "T"));
   } catch {
     throw new Error(`Error while parsing date ${str} using ${layout}`);
   }

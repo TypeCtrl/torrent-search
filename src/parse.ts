@@ -110,6 +110,10 @@ export function applyFilters(filterElements: Filters[], str: string): string | D
       result = filters.prepend(result, filter.args);
       continue;
     }
+    if (filter.name === 'querystring') {
+      result = filters.querystring(result, filter.args);
+      continue;
+    }
     // no arg
     if (filter.name === 'toupper') {
       result = filters.toupper(result);
@@ -119,7 +123,7 @@ export function applyFilters(filterElements: Filters[], str: string): string | D
       result = filters.urlencode(result);
       continue;
     }
-    throw new Error(`Filter not implemented: ${filter.name}`);
+    throw new Error(`Filter not implemented: ${filter.name} - ${result}`);
   }
   return result;
 }
