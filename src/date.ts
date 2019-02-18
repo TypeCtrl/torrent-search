@@ -11,7 +11,7 @@ export function fromUnknown(value: string | number) {
   if (typeof value === 'number') {
     return new Date(value);
   }
-  console.log({ value });
+
   const str = value.trim();
   if (str.toLowerCase().includes('now')) {
     return new Date();

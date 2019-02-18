@@ -3,7 +3,7 @@ import path from 'path';
 import nock from 'nock';
 import tk from 'timekeeper';
 
-import { getSearchResults } from '../src';
+import { Indexer } from '../src';
 import { definition as pt99Incredible } from './html/pt99-incredible-2-2019';
 
 describe('getSearchResults', () => {
@@ -12,7 +12,9 @@ describe('getSearchResults', () => {
   });
 
   it('should get incredible from pt99', async () => {
-    const definition = pt99Incredible;
+    const indexer = new Indexer({ site: 'pt99' });
+    // override definition
+    indexer.definition = pt99Incredible;
     const html = fs.readFileSync(
       path.join(__dirname, `./html/pt99-incredible-2-2019.text`),
       'utf8',
@@ -29,7 +31,7 @@ describe('getSearchResults', () => {
       })
       .reply(200, html);
 
-    const results = await getSearchResults(definition, 'Incredible', []);
+    const results = await indexer.getSearchResults('Incredible', []);
     const first = results[0];
     expect(first.FirstSeen).toBe('0001-01-01T00:00:00');
     expect(first.Tracker).toBe('PT99');

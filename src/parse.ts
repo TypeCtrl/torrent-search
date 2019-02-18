@@ -104,7 +104,7 @@ export function applyFilters(filterElements: Filters[], str: string): string | D
     }
     if (filter.name === 'dateparse') {
       // exit once its a date
-      return filters.dateparse(result, filter.args);
+      return String(filters.dateparse(result, filter.args));
     }
     if (filter.name === 'prepend') {
       result = filters.prepend(result, filter.args);
