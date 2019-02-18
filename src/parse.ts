@@ -73,7 +73,8 @@ export function applyFilters(filterElements: Filters[], str: string): string | D
   let result = str;
   for (const filter of filterElements) {
     // ignore random garbage filter
-    if (filter && (filter as GarbageDateparseFilter).dateparse) {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+    if (filter && !filter.name && (filter as GarbageDateparseFilter).dateparse === null) {
       continue;
     }
     // multiple arg

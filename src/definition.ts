@@ -17,7 +17,6 @@ export function getDefinition(site: string, source = 'jackett'): TrackerDefiniti
   return def;
 }
 
-
 export function mapTrackerCatToNewznab(input: string, categories: TorznabCategory[]): number[] {
   if (input === null) {
     return [];

@@ -81,7 +81,7 @@ export class Indexer {
   }
 
   async getSearchResults(q: string, categories: any[]) {
-    const search = this.definition.search;
+    const { search } = this.definition;
     const baseUrl = this.definition.links[0].endsWith('/')
       ? this.definition.links[0].substring(0, this.definition.links[0].length - 1)
       : this.definition.links[0];
@@ -158,6 +158,7 @@ export class Indexer {
   /**
    * normalize the fields returned from the cardigann page parse
    */
+  // eslint-disable-next-line complexity
   finalizeFields(body: any, baseUrl: string, categories: TorznabCategory[]) {
     // TODO: add release interface
     const release: ReleaseInfo = {
@@ -191,105 +192,114 @@ export class Indexer {
     };
     for (const key of Object.keys(body)) {
       const value = body[key];
-      switch (key) {
-        case 'download':
-          if (!value) {
-            release.Link = null;
-            break;
-          }
-          if (value.startsWith('magnet:')) {
-            // might need to parse URI?
-            release.MagnetUri = value;
-          } else {
-            release.Link = new URL(value, baseUrl).toString();
-          }
-          break;
-        case 'magnet':
+      if (key === 'download') {
+        if (!value) {
+          release.Link = null;
+          continue;
+        }
+        if (value.startsWith('magnet:')) {
           // might need to parse URI?
           release.MagnetUri = value;
+        } else {
+          release.Link = new URL(value, baseUrl).toString();
+        }
+      }
+      if (key === 'magnet') {
+        release.MagnetUri = value;
+        continue;
+      }
+      if (key === 'title') {
+        // if (FieldModifiers.Contains("append")) {
+        //     release.Title += value;
+        // } else {
+        //     release.Title = value;
+        // }
+        release.Title = value;
+        continue;
+      }
+      if (key === 'size') {
+        release.Size = bytes.parse(value);
+        continue;
+      }
+      if (key === 'leechers') {
+        const leechers = parseInt(value, 10);
+        release.Peers += leechers;
+        continue;
+      }
+      if (key === 'seeders') {
+        const seeders = parseInt(value, 10);
+        release.Seeders = seeders;
+        if (release.Peers === null) {
+          release.Peers = release.Seeders;
+        } else {
+          release.Peers += release.Seeders;
+        }
+        continue;
+      }
+      if (key === 'date') {
+        const date = fromUnknown(value);
+        // "2019-01-28T13:35:49.064149+00:00"
+        // release.PublishDate = format(date, "yyyy-MM-dd'T'HH:mm:ss.SSSSSSxxx", {
+        //   timeZone: 'Etc/UTC',
+        // });
+        release.PublishDate = date.toISOString();
+        continue;
+      }
+      if (key === 'details') {
+        const url = new URL(value, baseUrl);
+        release.Guid = url.toString();
+        release.Comments = url.toString();
+        continue;
+      }
+      if (key === 'comments') {
+        const commentsUrl = new URL(value, baseUrl);
+        if (release.Comments === null) {
+          release.Comments = commentsUrl.toString();
+        }
+        if (release.Guid === null) {
+          release.Guid = commentsUrl.toString();
+        }
+        continue;
+      }
+      if (key === 'grabs') {
+        release.Grabs = Number(value);
+        continue;
+      }
+      if (key === 'category') {
+        const cats = mapTrackerCatToNewznab(value, categories);
+        if (release.Category === null) {
+          release.Category = cats;
           break;
-        case 'title':
-          // if (FieldModifiers.Contains("append")) {
-          //     release.Title += value;
-          // } else {
-          //     release.Title = value;
-          // }
-          release.Title = value;
-          break;
-        case 'size':
-          release.Size = bytes.parse(value);
-          break;
-        case 'leechers':
-          const leechers = parseInt(value, 10);
-          release.Peers += leechers;
-          break;
-        case 'seeders':
-          const seeders = parseInt(value, 10);
-          release.Seeders = seeders;
-          if (release.Peers === null) {
-            release.Peers = release.Seeders;
-          } else {
-            release.Peers += release.Seeders;
+        }
+        for (const cat of cats) {
+          if (!release.Category.includes(cat)) {
+            release.Category.push(cat);
           }
-          break;
-        case 'date':
-          const date = fromUnknown(value);
-          // "2019-01-28T13:35:49.064149+00:00"
-          // release.PublishDate = format(date, "yyyy-MM-dd'T'HH:mm:ss.SSSSSSxxx", {
-          //   timeZone: 'Etc/UTC',
-          // });
-          release.PublishDate = date.toISOString();
-          break;
-        case 'details':
-          const url = new URL(value, baseUrl);
-          release.Guid = url.toString();
-          release.Comments = url.toString();
-          break;
-        case 'comments':
-          const commentsUrl = new URL(value, baseUrl);
-          if (release.Comments === null) {
-            release.Comments = commentsUrl.toString();
-          }
-          if (release.Guid === null) {
-            release.Guid = commentsUrl.toString();
-          }
-          break;
-        case 'grabs':
-          release.Grabs = Number(value);
-          break;
-        case 'category':
-          const cats = mapTrackerCatToNewznab(value, categories);
-          if (release.Category === null) {
-            release.Category = cats;
-            break;
-          }
-          for (const cat of cats) {
-            if (!release.Category.includes(cat)) {
-              release.Category.push(cat);
-            }
-          }
-          break;
-        case 'minimumratio':
-          release.MinimumRatio = Number(value);
-          break;
-        case 'minimumseedtime':
-          release.MinimumSeedTime = Number(value);
-          break;
-        case 'downloadvolumefactor':
-          release.DownloadVolumeFactor = Number(value);
-          break;
-        case 'uploadvolumefactor':
-          release.UploadVolumeFactor = Number(value);
-          break;
-        case 'imdb':
-          const imdb = Number(value);
-          if (!Number.isNaN(imdb)) {
-            release.Imdb = imdb;
-          }
-          break;
-        default:
-          console.log(key);
-        // throw new Error("I HAVE NO HANDLER. I CAN'T BE HANDLED");
+        }
+        continue;
+      }
+      if (key === 'minimumratio') {
+        release.MinimumRatio = Number(value);
+        continue;
+      }
+      if (key === 'minimumseedtime') {
+        release.MinimumSeedTime = Number(value);
+        continue;
+      }
+      if (key === 'downloadvolumefactor') {
+        release.DownloadVolumeFactor = Number(value);
+        continue;
+      }
+      if (key === 'uploadvolumefactor') {
+        release.UploadVolumeFactor = Number(value);
+        continue;
+      }
+      if (key === 'imdb') {
+        const imdb = Number(value);
+        if (!Number.isNaN(imdb)) {
+          release.Imdb = imdb;
+        }
+        continue;
       }
     }
 
