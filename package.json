@@ -28,8 +28,7 @@
   "dependencies": {
     "@ctrl/cloudflare": "^1.0.5",
     "@ctrl/golang-template": "^1.0.7",
-    "@ctrl/tracker-definitions": "^1.1.12",
-    "@types/query-string": "^6.2.0",
+    "@ctrl/tracker-definitions": "^1.1.15",
     "bytes": "^3.1.0",
     "cheerio": "^1.0.0-rc.2",
     "cloudscraper": "^2.0.0",
@@ -43,14 +42,15 @@
     "ua-string": "^2.1.0"
   },
   "devDependencies": {
+    "@types/query-string": "^6.2.0",
     "@types/bytes": "3.0.0",
     "@types/cheerio": "0.22.10",
     "@types/filenamify": "2.0.1",
     "@types/got": "9.4.0",
-    "@types/jest": "24.0.4",
+    "@types/jest": "24.0.6",
     "@types/lodash": "4.14.121",
     "@types/nock": "9.3.1",
-    "@types/node": "11.9.3",
+    "@types/node": "11.9.4",
     "@types/tough-cookie": "2.3.5",
     "@types/ua-string": "2.0.0",
     "jest": "24.1.0",
