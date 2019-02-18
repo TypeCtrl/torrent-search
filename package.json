@@ -42,7 +42,7 @@
     "ua-string": "^2.1.0"
   },
   "devDependencies": {
-    "@types/query-string": "^6.2.0",
+    "@types/query-string": "6.2.0",
     "@types/bytes": "3.0.0",
     "@types/cheerio": "0.22.10",
     "@types/filenamify": "2.0.1",
