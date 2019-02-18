@@ -54,7 +54,7 @@ export class Indexer {
       // TODO
     }
     if (login.method === 'cookie') {
-    if (!this.options.config || !this.options.config.cookie) {
+      if (!this.options.config || !this.options.config.cookie) {
         throw new Error('Cookie is required');
       }
       this.cookieJar.setCookieSync('cookie', this.options.config.cookie);
@@ -158,11 +158,7 @@ export class Indexer {
   /**
    * normalize the fields returned from the cardigann page parse
    */
-  finalizeFields(
-    body: any,
-    baseUrl: string,
-    categories: TorznabCategory[],
-  ) {
+  finalizeFields(body: any, baseUrl: string, categories: TorznabCategory[]) {
     // TODO: add release interface
     const release: ReleaseInfo = {
       Tracker: this.definition.name,
@@ -185,7 +181,7 @@ export class Indexer {
       Description: null,
       BannerUrl: null,
       BlackholeLink: null,
-      Peers: null,
+      Peers: 0,
       MinimumRatio: 1,
       MinimumSeedTime: 48 * 60 * 60,
       Size: 0,
@@ -225,7 +221,7 @@ export class Indexer {
           break;
         case 'leechers':
           const leechers = parseInt(value, 10);
-          release.Peers = leechers;
+          release.Peers += leechers;
           break;
         case 'seeders':
           const seeders = parseInt(value, 10);
@@ -239,9 +235,10 @@ export class Indexer {
         case 'date':
           const date = fromUnknown(value);
           // "2019-01-28T13:35:49.064149+00:00"
-          release.PublishDate = format(date, "yyyy-MM-dd'T'HH:mm:ss.SSSSSSxxx", {
-            timeZone: 'Etc/UTC',
-          });
+          // release.PublishDate = format(date, "yyyy-MM-dd'T'HH:mm:ss.SSSSSSxxx", {
+          //   timeZone: 'Etc/UTC',
+          // });
+          release.PublishDate = date.toISOString();
           break;
         case 'details':
           const url = new URL(value, baseUrl);
@@ -256,6 +253,9 @@ export class Indexer {
           if (release.Guid === null) {
             release.Guid = commentsUrl.toString();
           }
+          break;
+        case 'grabs':
+          release.Grabs = Number(value);
           break;
         case 'category':
           const cats = mapTrackerCatToNewznab(value, categories);
@@ -282,7 +282,10 @@ export class Indexer {
           release.UploadVolumeFactor = Number(value);
           break;
         case 'imdb':
-          release.Imdb = Number(value);
+          const imdb = Number(value);
+          if (!Number.isNaN(imdb)) {
+            release.Imdb = imdb;
+          }
           break;
         default:
           console.log(key);
@@ -317,7 +320,7 @@ export interface ReleaseInfo {
   Imdb: number | null;
   TMDb: number | null;
   Seeders: number;
-  Peers: number | null;
+  Peers: number;
   BannerUrl: string | null;
   InfoHash: string | null;
   MagnetUri: string | null;

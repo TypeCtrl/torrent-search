@@ -5,6 +5,7 @@ import tk from 'timekeeper';
 
 import { Indexer } from '../src';
 import { definition as eztvTrueDetective } from './html/eztv-true-detective-1-2019';
+import { subHours, subMinutes } from 'date-fns';
 
 describe('getSearchResults', () => {
   afterAll(() => {
@@ -36,7 +37,9 @@ describe('getSearchResults', () => {
     expect(first.Link).toBe(null);
     expect(first.Comments).toBe('https://eztv.io/ep/1306548/true-detective-s03e04-480p-x264-msd/');
     // ignore date for now
-    expect(first.PublishDate).toBe('2019-01-28T13:35:49.064000+00:00');
+    // expect(first.PublishDate).toBe('2019-01-28T13:35:49.064000+00:00');
+    // should be 17h 59m ago
+    expect(first.PublishDate).toBe(subMinutes(subHours(new Date(), 17), 59).toISOString());
     expect(first.Category).toEqual([5000, 100001]);
     expect(first.Size).toBe(219162869);
     expect(first.Files).toBe(null);

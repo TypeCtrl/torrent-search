@@ -7,7 +7,7 @@ const yesterdayRegexp = /\byesterday([\s,]*|$)/i;
 const missingYearRegexp = /^(\d{1,2}-\d{1,2})(\s|$)/;
 const missingYearRegexp2 = /^(\d{1,2}\s+\w{3})\s+(\d{1,2}\:\d{1,2}.*)$/;
 
-export function fromUnknown(value: string | number) {
+export function fromUnknown(value: string | number): Date {
   if (typeof value === 'number') {
     return new Date(value);
   }

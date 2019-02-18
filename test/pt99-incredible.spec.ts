@@ -45,7 +45,8 @@ describe('getSearchResults', () => {
     expect(first.Comments).toBe('https://pt.j99.info/details.php?id=1414&hit=1');
     // for some reason jackett is not emitting the same date format for different parsers
     // expect(first.PublishDate).toBe('2019-02-07T00:10:09');
-    expect(first.PublishDate).toBe('2019-02-07T00:10:09.000000+00:00');
+    // in the html its '2019-02-07 00:10:09'
+    expect(first.PublishDate).toBe('2019-02-07T00:10:09.000Z');
     expect(first.Category).toEqual([2000, 100401]);
     expect(first.Size).toBeCloseTo(2662879744, -3);
     expect(first.Files).toBe(null);

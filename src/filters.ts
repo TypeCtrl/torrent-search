@@ -2,11 +2,12 @@
  * do not attempt to rename these functions
  * they are the same name found in definitions
  */
-import filenamify from 'filenamify';
+
 import { parse } from 'date-fns';
+import { zonedTimeToUtc } from 'date-fns-tz';
+import filenamify from 'filenamify';
 import { trim as ltrim } from 'lodash';
 import queryString from 'query-string';
-import { format } from 'date-fns-tz';
 
 export function regexp(str: string, regExpStr: string): string {
   const exp = new RegExp(regExpStr);
@@ -121,12 +122,12 @@ export function dateparse(str: string, layout: string) {
   pattern = pattern.replace('-07', 'zz');
 
   try {
-    const result = parse(trimmed, pattern, new Date());
-    console.log(trimmed, pattern, result.toISOString(), format(result, "T", { timeZone: 'Etc/UTC' }));
+    const result = zonedTimeToUtc(parse(trimmed, pattern, new Date()), 'Etc/UTC');
+    // console.log(trimmed, pattern, result.toISOString(), format(result, "T", { timeZone: 'Etc/UTC' }));
     if ((result as any) === 'Invalid Date') {
       throw new Error(`Error while parsing date ${str} using ${layout}`);
     }
-    return Number(format(result, "T"));
+    return result.toISOString();
   } catch {
     throw new Error(`Error while parsing date ${str} using ${layout}`);
   }
