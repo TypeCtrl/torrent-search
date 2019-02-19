@@ -1,3 +1,4 @@
+import { subHours, subMinutes } from 'date-fns';
 import fs from 'fs';
 import nock from 'nock';
 import path from 'path';
@@ -5,7 +6,6 @@ import tk from 'timekeeper';
 
 import { Indexer } from '../src';
 import { definition as eztvTrueDetective } from './html/eztv-true-detective-1-2019';
-import { subHours, subMinutes } from 'date-fns';
 
 describe('getSearchResults', () => {
   afterAll(() => {
@@ -18,7 +18,7 @@ describe('getSearchResults', () => {
     // override definition
     indexer.definition = eztvTrueDetective;
     const html = fs.readFileSync(
-      path.join(__dirname, `./html/eztv-true-detective-1-2019.text`),
+      path.join(__dirname, './html/eztv-true-detective-1-2019.text'),
       'utf8',
     );
     const scope = nock('https://eztv.io/')
@@ -60,7 +60,7 @@ describe('getSearchResults', () => {
     expect(first.MagnetUri).toBe(
       'magnet:?xt=urn:btih:fc6ba4a92feb6cfaf3625fa5ecc1495d30007fc1&dn=True.Detective.S03E04.480p.x264-mSD%5Beztv%5D.mkv%5Beztv%5D&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A80&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969',
     );
-    scope.done();
+    expect(scope.isDone()).toBe(true);
   });
 });
 

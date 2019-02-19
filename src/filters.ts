@@ -39,6 +39,7 @@ export function querystring(str: string, field: string) {
   return queryString.parse(str)[field] as string || '';
 }
 
+// eslint-disable-next-line @typescript-eslint/camelcase
 export function re_replace(str: string, searchValue: string, replaceValue: string) {
   const reg = new RegExp(searchValue);
   return str.replace(reg, replaceValue);
@@ -110,12 +111,12 @@ export function dateparse(str: string, layout: string) {
   // these might need further tuning
   // pattern = pattern.replace("MST", "");
   // pattern = pattern.replace("Z07:00:00", "");
-  pattern = pattern.replace('Z07:00', "'Z'zzz");
-  pattern = pattern.replace('Z07', "'Z'zz");
+  pattern = pattern.replace('Z07:00', '\'Z\'zzz');
+  pattern = pattern.replace('Z07', '\'Z\'zz');
   // pattern = pattern.replace("Z070000", "");
   // pattern = pattern.replace("Z0700", "");
-  pattern = pattern.replace('Z07:00', "'Z'zzz");
-  pattern = pattern.replace('Z07', "'Z'zz");
+  pattern = pattern.replace('Z07:00', '\'Z\'zzz');
+  pattern = pattern.replace('Z07', '\'Z\'zz');
   // pattern = pattern.replace("-07:00:00", "");
   pattern = pattern.replace('-07:00', 'zzz');
   // pattern = pattern.replace("-0700", "zz");
@@ -124,9 +125,6 @@ export function dateparse(str: string, layout: string) {
   try {
     const result = zonedTimeToUtc(parse(trimmed, pattern, new Date()), 'Etc/UTC');
     // console.log(trimmed, pattern, result.toISOString(), format(result, "T", { timeZone: 'Etc/UTC' }));
-    if ((result as any) === 'Invalid Date') {
-      throw new Error(`Error while parsing date ${str} using ${layout}`);
-    }
     return result.toISOString();
   } catch {
     throw new Error(`Error while parsing date ${str} using ${layout}`);

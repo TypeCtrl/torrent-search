@@ -1,11 +1,16 @@
 import { subSeconds, subMinutes, subHours, subDays, subYears, subMonths, subWeeks } from 'date-fns';
 
 const timeAgoRegexp = /\bago/i;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const todayRegexp = /\btoday([\s,]*|$)/i;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const tomorrowRegexp = /\btomorrow([\s,]*|$)/i;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const yesterdayRegexp = /\byesterday([\s,]*|$)/i;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const missingYearRegexp = /^(\d{1,2}-\d{1,2})(\s|$)/;
-const missingYearRegexp2 = /^(\d{1,2}\s+\w{3})\s+(\d{1,2}\:\d{1,2}.*)$/;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const missingYearRegexp2 = /^(\d{1,2}\s+\w{3})\s+(\d{1,2}:\d{1,2}.*)$/;
 
 export function fromUnknown(value: string | number): Date {
   if (typeof value === 'number') {
@@ -37,7 +42,7 @@ export function fromTimeAgo(strTimeAgo: string) {
   str = str.replace('ago', '');
   str = str.replace('and', '');
 
-  const regex = /\s*?([\d\.]+)\s*?([^\d\s\.]+)\s*?/gi;
+  const regex = /\s*?([\d.]+)\s*?([^\d\s.]+)\s*?/gi;
   let m;
   let timeAgo = new Date();
 
@@ -66,7 +71,7 @@ export function fromTimeAgo(strTimeAgo: string) {
     } else if (unit.includes('year') || unit === 'y') {
       timeAgo = subYears(timeAgo, val);
     } else {
-      throw new Error('TimeAgo parsing failed, unknown unit: ' + unit);
+      throw new Error(`TimeAgo parsing failed, unknown unit: ${unit}`);
     }
   }
   return timeAgo;

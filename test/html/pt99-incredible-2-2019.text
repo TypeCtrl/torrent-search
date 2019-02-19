@@ -9,25 +9,25 @@
 <title>PT99 :: 搜索结果 - incredible PT99|下载|电影|电视剧 - Powered by NexusPHP</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" title="PT99 Torrents" href="opensearch.php" />
-<link rel="stylesheet" href="styles/buttons.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="styles/common.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="styles/mediumfont.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="styles/sprites.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="pic/forum_pic/chs/forumsprites.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="styles/Classic/theme.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="styles/Classic/DomTT.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="styles/curtain_imageresizer.css?111112311222" type="text/css" />
-<link rel="stylesheet" href="pic/category/chd/scenetorrents/catsprites.css?111112311222" type="text/css" />
+<link rel="stylesheet" href="styles/buttons.css" type="text/css" />
+<link rel="stylesheet" href="styles/common.css" type="text/css" />
+<link rel="stylesheet" href="styles/mediumfont.css" type="text/css" />
+<link rel="stylesheet" href="styles/sprites.css" type="text/css" />
+<link rel="stylesheet" href="pic/forum_pic/chs/forumsprites.css" type="text/css" />
+<link rel="stylesheet" href="styles/Classic/theme.css" type="text/css" />
+<link rel="stylesheet" href="styles/Classic/DomTT.css" type="text/css" />
+<link rel="stylesheet" href="styles/curtain_imageresizer.css" type="text/css" />
+<link rel="stylesheet" href="pic/category/chd/scenetorrents/catsprites.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="Latest Torrents" href="torrentrss.php" />
-<script type="text/javascript" src="jquery-3.3.1.min.js?111112311222"></script>
-<script type="text/javascript" src="curtain_imageresizer.js?111112311222"></script>
-<script type="text/javascript" src="ajaxbasic.js?111112311222"></script>
-<script type="text/javascript" src="common.js?111112311222"></script>
-<script type="text/javascript" src="domLib.js?111112311222"></script>
-<script type="text/javascript" src="domTT.js?111112311222"></script>
-<script type="text/javascript" src="domTT_drag.js?111112311222"></script>
-<script type="text/javascript" src="fadomatic.js?111112311222"></script>
-<script type="text/javascript" src="laydate/laydate.js?111112311222"></script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="curtain_imageresizer.js"></script>
+<script type="text/javascript" src="ajaxbasic.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="domLib.js"></script>
+<script type="text/javascript" src="domTT.js"></script>
+<script type="text/javascript" src="domTT_drag.js"></script>
+<script type="text/javascript" src="fadomatic.js"></script>
+<script type="text/javascript" src="laydate/laydate.js"></script>
 </head>
 <body>
 <table class="head" cellspacing="0" cellpadding="0" align="center">
@@ -43,14 +43,14 @@
 
 <table class="mainouter" width="982" cellspacing="0" cellpadding="5" align="center">
 	<tr><td id="nav_block" class="text" align="center">
-<table class="main" width="940" border="0" cellspacing="0" cellpadding="0"><tr><td class="embedded" ><div id="nav"><ul id="mainmenu" class="menu"><li><a href="index.php">&nbsp;首&nbsp;&nbsp;页&nbsp;</a></li><li><a href="forums.php">&nbsp;论&nbsp;&nbsp;坛&nbsp;</a></li><li class="selected"><a href="torrents.php">&nbsp;种&nbsp;&nbsp;子&nbsp;</a></li><li><a href="mybonusapps.php">游戏</a></li><li><a href="offers.php">&nbsp;候&nbsp;&nbsp;选&nbsp;</a></li><li><a href="upload.php">&nbsp;发&nbsp;&nbsp;布&nbsp;</a></li><li><a href="subtitles.php">&nbsp;字&nbsp;&nbsp;幕&nbsp;</a></li><li><a href="usercp.php">&nbsp;控制面板&nbsp;</a></li><li><a href="topten.php">排&nbsp;行&nbsp;榜</a></li><li><a href="log.php">&nbsp;日&nbsp;&nbsp;志&nbsp;</a></li><li><a href="rules.php">&nbsp;规&nbsp;&nbsp;则&nbsp;</a></li><li><a href="faq.php">&nbsp;常见问题&nbsp;</a></li><li><a href="staff.php">管&nbsp;理&nbsp;组</a></li></ul></div></td></tr></table>
+<table class="main" width="940" border="0" cellspacing="0" cellpadding="0"><tr><td class="embedded" ><div id="nav"><ul id="mainmenu" class="menu"><li><a href="index.php">&nbsp;首&nbsp;&nbsp;页&nbsp;</a></li><li><a href="forums.php">&nbsp;论&nbsp;&nbsp;坛&nbsp;</a></li><li class="selected"><a href="torrents.php">&nbsp;种&nbsp;&nbsp;子&nbsp;</a></li><li><a href="mybonusapps.php">游戏</a></li><li><a href="offers.php">&nbsp;候&nbsp;&nbsp;选&nbsp;</a></li><li><a href="viewrequests.php">&nbsp;求&nbsp;&nbsp;种&nbsp;</a></li><li><a href="upload.php">&nbsp;发&nbsp;&nbsp;布&nbsp;</a></li><li><a href="subtitles.php">&nbsp;字&nbsp;&nbsp;幕&nbsp;</a></li><li><a href="usercp.php">&nbsp;控制面板&nbsp;</a></li><li><a href="topten.php">排&nbsp;行&nbsp;榜</a></li><li><a href="log.php">&nbsp;日&nbsp;&nbsp;志&nbsp;</a></li><li><a href="rules.php">&nbsp;规&nbsp;&nbsp;则&nbsp;</a></li><li><a href="faq.php">&nbsp;常见问题&nbsp;</a></li><li><a href="staff.php">管&nbsp;理&nbsp;组</a></li></ul></div></td></tr></table>
 
 <table id="info_block" cellpadding="4" cellspacing="0" border="0" width="100%"><tr>
 	<td>
         <table width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
 		        <td class="bottom" align="left">
-                    <span class="medium">欢迎回来, <span class="nowrap"><a  href="userdetails.php?id=1234" class='User_Name'><b>fakeUsername</b></a></span>                        [<a href="logout.php">退出</a>]
+                    <span class="medium">欢迎回来, <span class="nowrap"><a  href="userdetails.php?id=1234" class='User_Name'><b>fake_username</b></a></span>                        [<a href="logout.php">退出</a>]
                                                                         [<a href="torrents.php?inclbookmarked=1&amp;allsec=1&amp;incldead=0">收藏</a>]
                         <font class = 'color_bonus'>魔力值 </font>
                         [<a href="mybonus.php">使用</a>]: <span id="seedbonus">0.0</span>
@@ -65,9 +65,9 @@
                         <img class="arrowup" alt="Torrents seeding" title="当前做种" src="pic/trans.gif" />0                        <img class="arrowdown" alt="Torrents leeching" title="当前下载" src="pic/trans.gif" />0&nbsp;&nbsp;
                         <font class='color_connectable'>可连接：</font>未知 <font class='color_slots'>连接数：</font>无限制</span></td>
 
-	<td class="bottom" align="right"><span class="medium" ><span id="curtimeSpan" data-time="1549842231">当前时间：2019-02-11 07:43:51</span><br />
+	<td class="bottom" align="right"><span class="medium" ><span id="curtimeSpan" data-time="1550536309">当前时间：2019-02-19 08:31:49</span><br />
 
-<a href="messages.php"><img class="inbox" src="pic/trans.gif" alt="inbox" title="收件箱&nbsp;(无新短讯)" /></a> 2 (0 新)  <a href="messages.php?action=viewmailbox&amp;box=-1"><img class="sentbox" alt="sentbox" title="发件箱" src="pic/trans.gif" /></a> 0 <a href="friends.php"><img class="buddylist" alt="Buddylist" title="社交名单" src="pic/trans.gif" /></a> <a href="getrss.php"><img class="rss" alt="RSS" title="获取RSS" src="pic/trans.gif" /></a>
+<a href="messages.php"><img class="inboxnew" src="pic/trans.gif" alt="inbox" title="收件箱&nbsp;(有新短讯)" /></a> 5 (2 新)  <a href="messages.php?action=viewmailbox&amp;box=-1"><img class="sentbox" alt="sentbox" title="发件箱" src="pic/trans.gif" /></a> 0 <a href="friends.php"><img class="buddylist" alt="Buddylist" title="社交名单" src="pic/trans.gif" /></a> <a href="getrss.php"><img class="rss" alt="RSS" title="获取RSS" src="pic/trans.gif" /></a>
 	</span></td>
 	</tr></table></td>
 </tr></table>
@@ -76,7 +76,9 @@
 
 <tr><td id="outer" align="center" class="outer" style="padding-top: 20px; padding-bottom: 20px">
 <div align="center" style="margin-bottom: 10px" id="ad_belownav"><b><font size="5"><span style="color: Red;"><a href="adredir.php?id=1&amp;url=http%3A%2F%2Fpt.j99.info%2Fforums.php%3Faction%3Dviewtopic%26amp%3Btopicid%3D116" target="_blank">招贤纳士(长期有效)</a></span> <span style="color: Red;"><br />
- 目前全站H&amp;R：单种下载后需在15天内必须做种36小时或者分享率达到1.0才可删除。 </font></b></span></div><table width="1080" class="main" border="0" cellspacing="0" cellpadding="0"><tr><td class="embedded"><form method="get" name="searchbox" action="?">
+ 目前全站H&amp;R：单种下载后需在15天内必须做种36小时或者分享率达到1.0才可删除。 </font></b></span></div><p><table border="0" cellspacing="0" cellpadding="10"><tr><td style='border: none; padding: 10px; background: red'>
+<b><a href="messages.php"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你有2条新短讯！点击查看&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></a></b></td></tr></table></p><br /><p><table border="0" cellspacing="0" cellpadding="10"><tr><td style='border: none; padding: 10px; background: green'>
+<b><a href="index.php"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有1条未读的重要消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></a></b></td></tr></table></p><br /><table width="1080" class="main" border="0" cellspacing="0" cellpadding="0"><tr><td class="embedded"><form method="get" name="searchbox" action="?">
 	<table border="1" class="searchbox" cellspacing="0" cellpadding="5" width="100%">
 		<tbody>
 		<tr>
@@ -252,7 +254,7 @@
 
 													</td>
 					</tr>
-<tr><td class="embedded" colspan="3">&nbsp;&nbsp;<a href="?search=%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83&amp;notnewword=1"><u>流浪地球</u></a>&nbsp;&nbsp;<a href="?search=%E6%B5%B7%E7%8E%8B&amp;notnewword=1"><u>海王</u></a>&nbsp;&nbsp;<a href="?search=%E5%B0%8F%E5%81%B7%E5%AE%B6%E6%97%8F&amp;notnewword=1"><u>小偷家族</u></a>&nbsp;&nbsp;<a href="?search=4k&amp;notnewword=1"><u>4k</u></a>&nbsp;&nbsp;<a href="?search=%E6%97%A0%E9%97%B4%E9%81%93&amp;notnewword=1"><u>无间道</u></a>&nbsp;&nbsp;<a href="?search=%E5%90%88%E9%9B%86&amp;notnewword=1"><u>合集</u></a>&nbsp;&nbsp;<a href="?search=%E6%AF%92%E6%B6%B2&amp;notnewword=1"><u>毒液</u></a>&nbsp;&nbsp;<a href="?search=%E7%A2%9F%E4%B8%AD%E8%B0%8D&amp;notnewword=1"><u>碟中谍</u></a>&nbsp;&nbsp;<a href="?search=%E7%94%9F%E5%8C%96%E5%8D%B1%E6%9C%BA&amp;notnewword=1"><u>生化危机</u></a>&nbsp;&nbsp;<a href="?search=%E6%80%92%E6%99%B4%E6%B9%98%E8%A5%BF&amp;notnewword=1"><u>怒晴湘西</u></a>&nbsp;&nbsp;<a href="?search=%E9%9F%B3%E4%B9%90&amp;notnewword=1"><u>音乐</u></a>&nbsp;&nbsp;<a href="?search=%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD&amp;notnewword=1"><u>黑客帝国</u></a>&nbsp;&nbsp;<a href="?search=2019&amp;notnewword=1"><u>2019</u></a>&nbsp;&nbsp;<a href="?search=%E4%B8%89%E7%BA%A7&amp;notnewword=1"><u>三级</u></a>&nbsp;&nbsp;<a href="?search=%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C&amp;notnewword=1"><u>冰与火之歌</u></a>&nbsp;&nbsp;</td></tr>				</table>
+<tr><td class="embedded" colspan="3">&nbsp;&nbsp;<a href="?search=%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83&amp;notnewword=1"><u>流浪地球</u></a>&nbsp;&nbsp;<a href="?search=%E7%A5%9E%E5%A5%87%E5%8A%A8%E7%89%A9&amp;notnewword=1"><u>神奇动物</u></a>&nbsp;&nbsp;<a href="?search=%E5%93%88%E5%88%A9%E6%B3%A2%E7%89%B9&amp;notnewword=1"><u>哈利波特</u></a>&nbsp;&nbsp;<a href="?search=%E6%97%A0%E5%8F%8C&amp;notnewword=1"><u>无双</u></a>&nbsp;&nbsp;<a href="?search=%E6%80%92%E6%99%B4%E6%B9%98%E8%A5%BF&amp;notnewword=1"><u>怒晴湘西</u></a>&nbsp;&nbsp;<a href="?search=%E7%BA%A2%E6%B5%B7%E8%A1%8C%E5%8A%A8&amp;notnewword=1"><u>红海行动</u></a>&nbsp;&nbsp;<a href="?search=%E7%9F%A5%E5%90%A6&amp;notnewword=1"><u>知否</u></a>&nbsp;&nbsp;<a href="?search=%E5%90%89%E5%8D%9C%E5%8A%9B&amp;notnewword=1"><u>吉卜力</u></a>&nbsp;&nbsp;<a href="?search=%E7%9F%A5%E5%90%A6%E7%9F%A5%E5%90%A6%E5%BA%94%E6%98%AF%E7%BB%BF%E8%82%A5%E7%BA%A2%E7%98%A6&amp;notnewword=1"><u>知否知否应是绿肥红瘦</u></a>&nbsp;&nbsp;<a href="?search=%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C&amp;notnewword=1"><u>冰与火之歌</u></a>&nbsp;&nbsp;<a href="?search=%E6%AF%92%E6%B6%B2&amp;notnewword=1"><u>毒液</u></a>&nbsp;&nbsp;<a href="?search=%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2&amp;notnewword=1"><u>中国通史</u></a>&nbsp;&nbsp;<a href="?search=%E6%B5%B7%E7%8E%8B&amp;notnewword=1"><u>海王</u></a>&nbsp;&nbsp;<a href="?search=%E7%88%86%E7%AC%91%E8%99%AB%E5%AD%90&amp;notnewword=1"><u>爆笑虫子</u></a>&nbsp;&nbsp;<a href="?search=FRDS&amp;notnewword=1"><u>FRDS</u></a>&nbsp;&nbsp;</td></tr>				</table>
 			</td>
 			<td class="rowfollow" align="center">
 				<input type="submit" class="btn" value="给我搜" />
@@ -261,7 +263,7 @@
 		</tbody>
 	</table>
 	</form>
-<div align="center" style="margin-top: 10px" id="ad_belowsearchbox"></div><p align="center"><font class="gray"><b title="Alt+Pageup">&lt;&lt;&nbsp;上一页</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="gray"><b title="Alt+Pagedown">下一页&nbsp;&gt;&gt;</b></font><br /><font class="gray"><b>1&nbsp;-&nbsp;6</b></font></p>
+<div align="center" style="margin-top: 10px" id="ad_belowsearchbox"></div><p align="center"><font class="gray"><b title="Alt+Pageup">&lt;&lt;&nbsp;上一页</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="gray"><b title="Alt+Pagedown">下一页&nbsp;&gt;&gt;</b></font><br /><font class="gray"><b>1&nbsp;-&nbsp;8</b></font></p>
 <p align='center'>快速搜索:&nbsp;&nbsp;</b><a href='torrents.php?spstate=2' title='查看免费种子'><font class='free'>免费</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=3' title='查看两倍上传量种子'><font class='twoup'>2倍上传</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=4' title='查看免费且两倍上传种子'><font class='twoupfree'>免费&2倍上传</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=5' title='查看50%下载种子'><font class='halfdown'>50%下载</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=6' title='查看50%下载且两倍上传种子'><font class='twouphalfdown'>50%下载&2倍上传</font></a>&nbsp;|&nbsp;<a href='torrents.php?spstate=7' title='查看30%下载种子'><font class='thirtypercent'>30%下载</font></a></p><table class="torrents" cellspacing="0" cellpadding="5" width="100%">
 <tr>
 <td class="colhead" style="padding: 0px">类型</td>
@@ -278,35 +280,53 @@
 </tr>
 <tr>
 <td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
-<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><img class="sticky" src="pic/trans.gif" alt="Sticky" title="置顶" />&nbsp;<a style="color:#000000;" title="The Incredible Monk III 2019 4K WEB-DL H265 AAC 2Audio-99TV"  href="details.php?id=1414&amp;hit=1"><b>The Incredible Monk III 2019 4K WEB-DL H265 AAC 2Audio-99TV</b></a><br /><div style=" display:inline-block;height:14px;line-height: 14px;padding-right: 5px;margin-top: 3px;"><a class="tag tag_official">官方</a><a  class="tag tag_mandarin" style="margin-left: 3px;">国语</a><a  class="tag tag_chinese" style="margin-left: 3px;">中字</a></div>济公之降龙有悔 | 主演: 陈浩民 / 林子聪 / 徐申东 / 苑琼丹 | 国粤双语</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1414"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark0"  href="javascript: bookmark(1414,0);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
-</tr></table></td><td class="rowfollow"><b><a href="details.php?id=1414&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2019-02-07 00:10:09">4天<br />7时</span></td><td class="rowfollow">2.48<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1414&amp;hit=1&amp;dllist=1#seeders">30</a></b></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredible Hulk (1080p HD) m4v H264 AAC"  href="details.php?id=1545&amp;hit=1"><b>The Incredible Hulk (1080p HD) m4v H264 AAC&nbsp;&nbsp;&nbsp; <b>[<font class='thirtypercent' >30%</font>]</b></b></a> <img class="pro_30pctdown" src="pic/trans.gif" alt="30%"  onmouseover="domTT_activate(this, event, 'content', '&lt;b&gt;&lt;font class=&quot;thirtypercent&quot;&gt;30%&lt;/font&gt;&lt;/b&gt;剩余时间：&lt;b&gt;&lt;span title=&quot;2019-02-26 17:00:28&quot;&gt;7天8时&lt;/span&gt;&lt;/b&gt;', 'trail', false, 'delay',500,'lifetime',3000,'fade','both','styleClass','niceTitle', 'fadeMax',87, 'maxWidth', 300);" /><br />无敌浩克/2008/M4V/苹果自购</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1545"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark0"  href="javascript: bookmark(1545,0);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=1545&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2019-02-16 17:00:28">2天<br />15时</span></td><td class="rowfollow">3.97<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1545&amp;hit=1&amp;dllist=1#seeders">6</a></b></td>
 <td class="rowfollow">0</td>
-<td class="rowfollow"><a href="viewsnatches.php?id=1414"><b>39</b></a></td>
+<td class="rowfollow"><a href="viewsnatches.php?id=1545"><b>8</b></a></td>
+<td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=4532" class='User_Name'><b>jiangbailei</b></a></span></td>
+    <td class="rowfollow"></td>
+    </tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredible Monk - Dragon Return 2018 HKG Blu-ray 1080i AVC TrueHD 5.1-doraemon"  href="details.php?id=1495&amp;hit=1"><b>The Incredible Monk - Dragon Return 2018 HKG Blu-ray 1080i AVC TrueH..&nbsp;&nbsp;&nbsp; <b>[<font class='thirtypercent' >30%</font>]</b></b></a> <img class="pro_30pctdown" src="pic/trans.gif" alt="30%"  onmouseover="domTT_activate(this, event, 'content', '&lt;b&gt;&lt;font class=&quot;thirtypercent&quot;&gt;30%&lt;/font&gt;&lt;/b&gt;剩余时间：&lt;b&gt;&lt;span title=&quot;2019-02-23 00:17:16&quot;&gt;3天15时&lt;/span&gt;&lt;/b&gt;', 'trail', false, 'delay',500,'lifetime',3000,'fade','both','styleClass','niceTitle', 'fadeMax',87, 'maxWidth', 300);" /><br /><div style=" display:inline-block;height:14px;line-height: 14px;padding-right: 5px;margin-top: 3px;"><a class="tag tag_mandarin">国语</a><a  class="tag tag_chinese" style="margin-left: 3px;">中字</a></div>济公之逆天行道 / 济公之神龙再现 [自购港版原盘] [国粤双语] [简繁英字幕]</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1495"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark1"  href="javascript: bookmark(1495,1);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=1495&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2019-02-13 00:17:16">6天<br />8时</span></td><td class="rowfollow">23.41<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1495&amp;hit=1&amp;dllist=1#seeders">5</a></b></td>
+<td class="rowfollow"><b><a href="details.php?id=1495&amp;hit=1&amp;dllist=1#leechers">1</a></b></td>
+<td class="rowfollow"><a href="viewsnatches.php?id=1495"><b>10</b></a></td>
+<td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=4735" class='User_Name'><b>VVV</b></a></span></td>
+    <td class="rowfollow"></td>
+    </tr>
+<tr>
+<td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredible Monk III 2019 4K WEB-DL H265 AAC 2Audio-99TV"  href="details.php?id=1414&amp;hit=1"><b>The Incredible Monk III 2019 4K WEB-DL H265 AAC 2Audio-99TV</b></a><br /><div style=" display:inline-block;height:14px;line-height: 14px;padding-right: 5px;margin-top: 3px;"><a class="tag tag_official">官方</a><a  class="tag tag_mandarin" style="margin-left: 3px;">国语</a><a  class="tag tag_chinese" style="margin-left: 3px;">中字</a></div>济公之降龙有悔 | 主演: 陈浩民 / 林子聪 / 徐申东 / 苑琼丹 | 国粤双语</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1414"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark2"  href="javascript: bookmark(1414,2);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><b><a href="details.php?id=1414&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2019-02-07 00:10:09">12天<br />8时</span></td><td class="rowfollow">2.48<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1414&amp;hit=1&amp;dllist=1#seeders">23</a></b></td>
+<td class="rowfollow">0</td>
+<td class="rowfollow"><a href="viewsnatches.php?id=1414"><b>47</b></a></td>
 <td class="rowfollow"><i>匿名</i></td>
     <td class="rowfollow"></td>
     </tr>
 <tr>
 <td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
-<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><img class="sticky" src="pic/trans.gif" alt="Sticky" title="置顶" />&nbsp;<a style="color:#000000;" title="The Incredible Monk III 2019 4K WEB-DL H264 AAC 2Audio-99TV"  href="details.php?id=1413&amp;hit=1"><b>The Incredible Monk III 2019 4K WEB-DL H264 AAC 2Audio-99TV</b></a><br /><div style=" display:inline-block;height:14px;line-height: 14px;padding-right: 5px;margin-top: 3px;"><a class="tag tag_official">官方</a><a  class="tag tag_mandarin" style="margin-left: 3px;">国语</a><a  class="tag tag_chinese" style="margin-left: 3px;">中字</a></div>济公之降龙有悔 | 主演: 陈浩民 / 林子聪 / 徐申东 / 苑琼丹 | 国粤双语</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1413"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark1"  href="javascript: bookmark(1413,1);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
-</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=1413&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2019-02-07 00:04:18">4天<br />7时</span></td><td class="rowfollow">3.36<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1413&amp;hit=1&amp;dllist=1#seeders">25</a></b></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredible Monk III 2019 4K WEB-DL H264 AAC 2Audio-99TV"  href="details.php?id=1413&amp;hit=1"><b>The Incredible Monk III 2019 4K WEB-DL H264 AAC 2Audio-99TV</b></a><br /><div style=" display:inline-block;height:14px;line-height: 14px;padding-right: 5px;margin-top: 3px;"><a class="tag tag_official">官方</a><a  class="tag tag_mandarin" style="margin-left: 3px;">国语</a><a  class="tag tag_chinese" style="margin-left: 3px;">中字</a></div>济公之降龙有悔 | 主演: 陈浩民 / 林子聪 / 徐申东 / 苑琼丹 | 国粤双语</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=1413"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark3"  href="javascript: bookmark(1413,3);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=1413&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2019-02-07 00:04:18">12天<br />8时</span></td><td class="rowfollow">3.36<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=1413&amp;hit=1&amp;dllist=1#seeders">20</a></b></td>
 <td class="rowfollow">0</td>
-<td class="rowfollow"><a href="viewsnatches.php?id=1413"><b>33</b></a></td>
+<td class="rowfollow"><a href="viewsnatches.php?id=1413"><b>38</b></a></td>
 <td class="rowfollow"><i>匿名</i></td>
     <td class="rowfollow"></td>
     </tr>
 <tr>
 <td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
-<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 1080p BluRay x264 DTS-WiKi"  href="details.php?id=189&amp;hit=1"><b>The Incredibles 2 2018 1080p BluRay x264 DTS-WiKi&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <b>[<font class='hot'>热门</font>]</b> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />[超人总动员2/「超人家庭强势回归 组团拯救炫酷世界」] *（公映）国台粤英4声轨 *内封中英双语字幕</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=189"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark2"  href="javascript: bookmark(189,2);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
-</tr></table></td><td class="rowfollow"><b><a href="details.php?id=189&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2018-11-06 13:48:22">3月<br />6天</span></td><td class="rowfollow">11.20<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=189&amp;hit=1&amp;dllist=1#seeders">1</a></b></td>
-<td class="rowfollow">0</td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 1080p BluRay x264 DTS-WiKi"  href="details.php?id=189&amp;hit=1"><b>The Incredibles 2 2018 1080p BluRay x264 DTS-WiKi&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <b>[<font class='hot'>热门</font>]</b> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />[超人总动员2/「超人家庭强势回归 组团拯救炫酷世界」] *（公映）国台粤英4声轨 *内封中英双语字幕</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=189"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark4"  href="javascript: bookmark(189,4);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><b><a href="details.php?id=189&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2018-11-06 13:48:22">3月<br />14天</span></td><td class="rowfollow">11.20<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=189&amp;hit=1&amp;dllist=1#seeders">1</a></b></td>
+<td class="rowfollow"><b><a href="details.php?id=189&amp;hit=1&amp;dllist=1#leechers">1</a></b></td>
 <td class="rowfollow"><a href="viewsnatches.php?id=189"><b>20</b></a></td>
 <td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=375" class='User_Name'><b>JOJO</b></a></span></td>
     <td class="rowfollow"></td>
     </tr>
 <tr>
 <td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
-<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 BluRay 1080p DDP7 1 x264-TnP"  href="details.php?id=184&amp;hit=1"><b>The Incredibles 2 2018 BluRay 1080p DDP7 1 x264-TnP&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <b>[<font class='hot'>热门</font>]</b> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=184"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark3"  href="javascript: bookmark(184,3);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
-</tr></table></td><td class="rowfollow"><b><a href="details.php?id=184&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2018-11-06 09:54:53">3月<br />6天</span></td><td class="rowfollow">12.61<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=184&amp;hit=1&amp;dllist=1#seeders">1</a></b></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 BluRay 1080p DDP7 1 x264-TnP"  href="details.php?id=184&amp;hit=1"><b>The Incredibles 2 2018 BluRay 1080p DDP7 1 x264-TnP&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <b>[<font class='hot'>热门</font>]</b> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=184"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark5"  href="javascript: bookmark(184,5);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><b><a href="details.php?id=184&amp;hit=1&amp;cmtpage=1#startcomments" >1</a></b></td><td class="rowfollow nowrap"><span title="2018-11-06 09:54:53">3月<br />14天</span></td><td class="rowfollow">12.61<br />GB</td><td class="rowfollow" align="center"><b><a href="details.php?id=184&amp;hit=1&amp;dllist=1#seeders">1</a></b></td>
 <td class="rowfollow">0</td>
 <td class="rowfollow"><a href="viewsnatches.php?id=184"><b>26</b></a></td>
 <td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=1488" class='User_Name'><b>XDY</b></a></span></td>
@@ -314,23 +334,23 @@
     </tr>
 <tr>
 <td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=401"><img class="c_movies" src="pic/cattrans.gif" alt="Movies(电影)" title="Movies(电影)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
-<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="[OurBits] [89316] The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-wezjh@OurBits"  href="details.php?id=18&amp;hit=1"><b>[OurBits] [89316] The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-H..&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2[DIY简繁/简繁双语字幕]</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=18"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark4"  href="javascript: bookmark(18,4);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
-</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=18&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2018-11-03 10:18:18">3月<br />9天</span></td><td class="rowfollow">43.94<br />GB</td><td class="rowfollow"><span class="red">0</span></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="[OurBits] [89316] The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-wezjh@OurBits"  href="details.php?id=18&amp;hit=1"><b>[OurBits] [89316] The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-H..&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2[DIY简繁/简繁双语字幕]</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=18"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark6"  href="javascript: bookmark(18,6);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=18&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2018-11-03 10:18:18">3月<br />17天</span></td><td class="rowfollow">43.94<br />GB</td><td class="rowfollow"><span class="red">0</span></td>
 <td class="rowfollow">0</td>
 <td class="rowfollow">0</td>
-<td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=2" class='VIP_Name'><b>wshiny</b></a><img class="star" src="pic/trans.gif" alt="Donor" style='margin-left: 2pt' /></span></td>
+<td class="rowfollow"><span class="nowrap"><a  href="userdetails.php?id=2" class='User_Name'><b>wshiny</b></a><img class="star" src="pic/trans.gif" alt="Donor" style='margin-left: 2pt' /></span></td>
     <td class="rowfollow"></td>
     </tr>
 <tr>
 <td class="rowfollow nowrap" valign="middle" style='padding: 0px'><a href="?cat=405"><img class="c_anime" src="pic/cattrans.gif" alt="Animations(动漫)" title="Animations(动漫)" style="background-image: url(pic/category/chd/scenetorrents/chs/catsprites.png);" /></a></td>
-<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-Highvoltage"  href="details.php?id=9&amp;hit=1"><b>The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-Highvoltage&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2/超人特攻队2(台)/超人特工队2(港) 【巴版原盘 国语中字】</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=9"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark5"  href="javascript: bookmark(9,5);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
-</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=9&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2018-11-02 09:58:56">3月<br />10天</span></td><td class="rowfollow">43.79<br />GB</td><td class="rowfollow"><span class="red">0</span></td>
+<td class="rowfollow progresstd" width="100%" align="left"><div class="progressdownloading" style='width:0%;'></div><table class="torrentname" width="100%"><tr><td class="embedded" style="color:#000000;"><a style="color:#000000;" title="The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-Highvoltage"  href="details.php?id=9&amp;hit=1"><b>The Incredibles 2 2018 1080p BRA Blu-ray AVC DTS-HD MA 7 1-Highvoltage&nbsp;&nbsp;&nbsp; <b>[<font class='twoupfree' >2X免费</font>]</b></b></a> <img class="pro_free2up" src="pic/trans.gif" alt="2X Free" title="2X免费" /><br />超人总动员2/超人特攻队2(台)/超人特工队2(港) 【巴版原盘 国语中字】</td><td width="20" class="embedded" style="text-align: right; " valign="middle"><a href="download.php?id=9"><img class="download" src="pic/trans.gif" style='padding-bottom: 2px;' alt="download" title="下载本种" /></a><br /><a id="bookmark7"  href="javascript: bookmark(9,7);" ><img class="delbookmark" src="pic/trans.gif" alt="Unbookmarked" title="收藏" /></a></td>
+</tr></table></td><td class="rowfollow"><a href="comment.php?action=add&amp;pid=9&amp;type=torrent" title="添加评论">0</a></td><td class="rowfollow nowrap"><span title="2018-11-02 09:58:56">3月<br />18天</span></td><td class="rowfollow">43.79<br />GB</td><td class="rowfollow"><span class="red">0</span></td>
 <td class="rowfollow">0</td>
 <td class="rowfollow"><a href="viewsnatches.php?id=9"><b>1</b></a></td>
 <td class="rowfollow"><i>匿名</i></td>
     <td class="rowfollow"></td>
     </tr>
-</table><p align="center"><font class="gray"><b>1&nbsp;-&nbsp;6</b></font><br /><font class="gray"><b title="Alt+Pageup">&lt;&lt;&nbsp;上一页</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="gray"><b title="Alt+Pagedown">下一页&nbsp;&gt;&gt;</b></font></p>
+</table><p align="center"><font class="gray"><b>1&nbsp;-&nbsp;8</b></font><br /><font class="gray"><b title="Alt+Pageup">&lt;&lt;&nbsp;上一页</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="gray"><b title="Alt+Pagedown">下一页&nbsp;&gt;&gt;</b></font></p>
 </td></tr></table><script >
     (function($){
         var timeOut = $('.timeCountdown');
@@ -368,7 +388,7 @@
         }
     })(jQuery);
 </script>
-</td></tr></table><div id="footer"><div style="margin-top: 10px; margin-bottom: 30px;" align="center"> (c)  <a href="http://pt.j99.info" target="_self">PT99</a> 2018-2019 Powered by <a href="aboutnexus.php">NexusPHP</a><br /><br />[page created in <b> 0.004429 </b> sec with <b>18</b> db queries, <b>27</b> reads and <b>1</b> writes of memcached and <b>1.97 MB</b> ram]</div>
+</td></tr></table><div id="footer"><div style="margin-top: 10px; margin-bottom: 30px;" align="center"> (c)  <a href="http://pt.j99.info" target="_self">PT99</a> 2018-2019 Powered by <a href="aboutnexus.php">NexusPHP</a><br /><br />[page created in <b> 0.006364 </b> sec with <b>29</b> db queries, <b>29</b> reads and <b>2</b> writes of memcached and <b>1.99 MB</b> ram]</div>
 <div style="display: none;" id="lightbox" class="lightbox"></div><div style="display: none;" id="curtain" class="curtain"></div>
 <script type="text/javascript">
 //<![CDATA[

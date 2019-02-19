@@ -4,7 +4,6 @@ import { flatten } from 'lodash';
 import { CookieJar } from 'tough-cookie';
 import uaString from 'ua-string';
 import { URL } from 'url';
-import { format } from 'date-fns-tz';
 
 import { catchCloudflare } from '@ctrl/cloudflare';
 import { parse as golangParse } from '@ctrl/golang-template';
@@ -46,7 +45,7 @@ export class Indexer {
     if (!this.definition.login) {
       return;
     }
-    const login = this.definition.login;
+    const { login } = this.definition;
     if (login.method === 'post') {
       // TODO
     }
@@ -82,9 +81,9 @@ export class Indexer {
 
   async getSearchResults(q: string, categories: any[]) {
     const { search } = this.definition;
-    const baseUrl = this.definition.links[0].endsWith('/')
-      ? this.definition.links[0].substring(0, this.definition.links[0].length - 1)
-      : this.definition.links[0];
+    const baseUrl = this.definition.links[0].endsWith('/') ?
+      this.definition.links[0].substring(0, this.definition.links[0].length - 1) :
+      this.definition.links[0];
     const config: any = {};
 
     const cookieJar = new CookieJar();
@@ -146,7 +145,8 @@ export class Indexer {
         page = await catchCloudflare(e, { ...options, path, query });
         // console.log(page.headers)
       }
-      for (const response of parseSearchResults(search.rows, search.fields, page.body)) {
+      const searchResults = parseSearchResults(search.rows, search.fields, page.body);
+      for (const response of searchResults) {
         responses.push(this.finalizeFields(response, baseUrl, availableCategories));
       }
     }

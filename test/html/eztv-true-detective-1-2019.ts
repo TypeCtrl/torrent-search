@@ -19,7 +19,7 @@ export const definition: TrackerDefinition = {
     paths: [{ path: '{{if .Keywords}}search/{{ .Keywords}}{{else}}/{{end}}' }],
     keywordsfilters: [{ name: 're_replace', args: ['S[0-9]{2}([^E]|$)', ''] }],
     rows: {
-      selector: "table.forum_header_border tr[name='hover'].forum_header_border:has(a.magnet)",
+      selector: 'table.forum_header_border tr[name=\'hover\'].forum_header_border:has(a.magnet)',
       filters: [{ name: 'andmatch' }],
     },
     fields: {

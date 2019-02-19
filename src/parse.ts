@@ -16,7 +16,7 @@ export function parseSearchResults(rowsSelector: Selector, fields: Fields, html:
     }
   }
 
-  const results = range(rows.length).map(() => ({}));
+  const results: any[] = range(rows.length).map(() => ({}));
   for (let idx = 0; idx < results.length; idx++) {
     const row = rows[idx];
     for (const field of Object.keys(fields)) {
@@ -24,6 +24,9 @@ export function parseSearchResults(rowsSelector: Selector, fields: Fields, html:
       if (selector.selector) {
         const htmlResult = htmlSelector(selector, row, $);
         results[idx][field] = htmlResult;
+      }
+      if (selector.case) {
+        results[idx][field] = findCase(selector, row, $);
       }
       if (selector.filters && selector.filters.length) {
         results[idx][field] = applyFilters(selector.filters, results[idx][field]);
@@ -45,6 +48,23 @@ export function parseSearchResults(rowsSelector: Selector, fields: Fields, html:
   }
 
   return results;
+}
+
+export function findCase(select: Selector, row: CheerioElement, $: CheerioStatic) {
+  if (!select.case) {
+    throw new Error('Case is required');
+  }
+  for (const selectorCase of Object.keys(select.case)) {
+    const result = $(row)
+      .find($(selectorCase))
+      .first();
+    if (result.length >= 1) {
+      return select.case[selectorCase];
+    }
+  }
+  throw new Error(
+    `None of the case selectors "${Object.keys(select.case).join(',')}" matched ${$(row).html()}`,
+  );
 }
 
 /**
