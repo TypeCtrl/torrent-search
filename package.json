@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/query-string": "6.2.0",
     "@types/bytes": "3.0.0",
-    "@types/cheerio": "0.22.10",
+    "@types/cheerio": "0.22.11",
     "@types/filenamify": "2.0.1",
     "@types/got": "9.4.1",
     "@types/jest": "24.0.9",
