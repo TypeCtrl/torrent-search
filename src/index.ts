@@ -79,11 +79,17 @@ export class Indexer {
     return results;
   }
 
+  /**
+   * get search results for query
+   * @param q query string
+   * @param categories an array of categories
+   */
   async getSearchResults(q: string, categories: any[]) {
     const { search } = this.definition;
-    const baseUrl = this.definition.links[0].endsWith('/') ?
-      this.definition.links[0].substring(0, this.definition.links[0].length - 1) :
-      this.definition.links[0];
+    const baseUrl = this.definition.links[0].endsWith('/')
+      ? this.definition.links[0].substring(0, this.definition.links[0].length - 1)
+      : this.definition.links[0];
+    // TODO: config should be settings?
     const config: any = {};
 
     const cookieJar = new CookieJar();
@@ -104,36 +110,17 @@ export class Indexer {
     const availableCategories = this.addCategoryMapping();
 
     const responses: ReleaseInfo[] = [];
+    // loop over paths, often used with browse?page=1 and browse?page=2 to get more results
     for (const searchPath of search.paths) {
       let path = golangParse(searchPath.path, { Config: config, Keywords: q });
       path = path.startsWith('/') ? path : '/' + path;
       path = encodeURI(path);
       // TODO: $raw
-      const query: any = {};
+      let query: any = {};
       if (search.inputs) {
-        for (const name of Object.keys(search.inputs)) {
-          // TODO: pass config
-          // TODO: imdb feature
-          console.log(search.inputs[name], { Keywords: q });
-          // TODO: Categories should be an array of ID's from selected cats
-          const value = golangParse(`${search.inputs[name]}`, {
-            Keywords: q,
-            Categories: categories,
-          });
-          console.log({ value });
-          if (name === '$raw') {
-            for (const part of value.split('&')) {
-              const [key, val] = part.split('=');
-              if (!key || !val) {
-                continue;
-              }
-              query[key] = val;
-            }
-            continue;
-          }
-          query[name] = value;
-        }
+        query = searchQuery(search.inputs, q, categories);
       }
+
       console.log({ path, query });
 
       let page: Response<any>;
@@ -309,6 +296,36 @@ export class Indexer {
     release.CategoryDesc = mapTrackerCategory(release.Category, categories);
     return release;
   }
+}
+
+/**
+ * setup query params for a request
+ * @param q query string
+ * @param categories an array of categories
+ */
+export function searchQuery(inputs, q: string, categories: any[]) {
+  const query: Record<string, string> = {};
+  for (const name of Object.keys(inputs)) {
+    // TODO: pass config
+    // TODO: imdb feature
+    // TODO: Categories should be an array of ID's from selected cats
+    const value = golangParse(`${inputs[name]}`, {
+      Keywords: q,
+      Categories: categories,
+    });
+    if (name === '$raw') {
+      for (const part of value.split('&')) {
+        const [key, val] = part.split('=');
+        if (!key || !val) {
+          continue;
+        }
+        query[key] = val;
+      }
+      continue;
+    }
+    query[name] = value;
+  }
+  return query;
 }
 
 export interface ReleaseInfo {

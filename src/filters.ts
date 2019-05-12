@@ -45,8 +45,8 @@ export function re_replace(str: string, searchValue: string, replaceValue: strin
   return str.replace(reg, replaceValue);
 }
 
-export function replace(str: string, searchValue: string, replaceValue: string) {
-  return str.replace(searchValue, replaceValue);
+export function replace(str: string, searchValue: string, replaceValue: string | number) {
+  return str.replace(searchValue, `${replaceValue}`);
 }
 
 export function split(str: string, searchValue: string, position: number) {

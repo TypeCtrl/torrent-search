@@ -21,5 +21,7 @@ module.exports = {
     'padding-line-between-statements': 0,
     'lines-between-class-members': 0,
     'no-await-in-loop': 0,
+    'operator-linebreak': 0,
+    'no-warning-comments': 0,
   },
 };
