@@ -54,7 +54,7 @@
     "@typescript-eslint/eslint-plugin": "1.8.0",
     "@typescript-eslint/parser": "1.8.0",
     "eslint": "5.16.0",
-    "eslint-config-prettier": "4.2.0",
+    "eslint-config-prettier": "4.3.0",
     "eslint-config-xo-space": "0.21.0",
     "eslint-config-xo-typescript": "0.11.0",
     "eslint-plugin-import": "2.17.2",
