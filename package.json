@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/query-string": "6.3.0",
     "@types/bytes": "3.0.0",
-    "@types/cheerio": "0.22.12",
+    "@types/cheerio": "0.22.13",
     "@types/got": "9.6.5",
     "@types/jest": "24.0.16",
     "@types/lodash": "4.14.136",
