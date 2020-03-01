@@ -67,7 +67,7 @@
     "timekeeper": "2.2.0",
     "ts-jest": "24.3.0",
     "ts-node": "8.6.2",
-    "typescript": "3.4.5"
+    "typescript": "3.8.3"
   },
   "release": {
     "branch": "master"
