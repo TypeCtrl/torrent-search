@@ -46,7 +46,7 @@
     "@types/cheerio": "0.22.18",
     "@types/got": "9.6.11",
     "@types/jest": "24.9.1",
-    "@types/lodash": "4.14.150",
+    "@types/lodash": "4.14.154",
     "@types/nock": "10.0.3",
     "@types/node": "12.12.37",
     "@types/tough-cookie": "2.3.7",
