@@ -57,7 +57,7 @@
     "eslint-config-prettier": "4.3.0",
     "eslint-config-xo-space": "0.21.0",
     "eslint-config-xo-typescript": "0.11.0",
-    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-import": "2.22.0",
     "jest": "24.9.0",
     "jest-junit": "6.4.0",
     "nock": "10.0.6",
