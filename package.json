@@ -35,7 +35,7 @@
     "date-fns-tz": "^1.0.7",
     "filenamify": "^4.0.0",
     "got": "^9.6.0",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "query-string": "^6.5.0",
     "tough-cookie": "^3.0.1",
     "ua-string": "^3.0.0"
